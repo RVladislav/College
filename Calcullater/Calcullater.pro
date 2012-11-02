@@ -12,11 +12,13 @@ TARGET = Calcullater
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    MainForm.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    Head.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    MainForm(window).ui
 
 OTHER_FILES +=
