@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsScene>
 
 namespace Ui {
 class MainWindow;
@@ -15,11 +16,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private slots:
-    void on_graphOne_customContextMenuRequested(const QPoint &pos);
-
 private:
     Ui::MainWindow *ui;
+};
+
+class MyScene : public QGraphicsScene
+{
+virtual protected:
+    void mouseMoveEvent ( QGraphicsSceneMouseEvent * mouseEvent );
 };
 
 #endif // MAINWINDOW_H
