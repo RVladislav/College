@@ -20,10 +20,6 @@ private:
     Ui::MainWindow *ui;
 };
 
-class MyScene : public QGraphicsScene
-{
-virtual protected:
-    void mouseMoveEvent ( QGraphicsSceneMouseEvent * mouseEvent );
-};
+
 
 #endif // MAINWINDOW_H
