@@ -24,8 +24,4 @@ MainWindow::~MainWindow()
 }
 
 
-void Scene::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-QGraphicsScene::mousePressEvent(event);
 
-
-}
