@@ -18,6 +18,8 @@ MainWindow::~MainWindow()
 
         QGraphicsView scene_view(&Myscene);
         scene_view.setRenderHints(QPainter::Antialiasing);
+        scene_view.setMaximumHeight(300);
+        scene_view.setMaximumWidth(300);
         ui->graphOne->setScene(&Myscene);
 
     delete ui;

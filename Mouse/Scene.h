@@ -13,8 +13,12 @@
 class Scene : public QGraphicsScene
 {
     Q_OBJECT
+public:
+    float changeX(float xPoint);
+    float changeY(float yPoint);
 private:
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event);
     virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event);
     virtual void mouseMoveEvent( QGraphicsSceneMouseEvent *event);
+
 };
