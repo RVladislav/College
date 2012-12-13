@@ -41,7 +41,8 @@ float xNow = event->pos().x();
 float yNow = event->pos().y();
 float xBefore = changeX(xNow);
 float yBefore = changeY(yNow);
-Scene::addLine(xBefore,yBefore,xNow,yNow);
+this->addLine(xBefore,yBefore,xNow,yNow,QPen(Qt::black));
+
 }
 
 void Scene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
