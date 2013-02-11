@@ -8,12 +8,28 @@ namespace Panzer
 {
     class PanzerIMG
     {
-        Image imgRight = Properties.Resources.PanzerRight1;
-        Image imgUp = Properties.Resources.PanzerUp1;
-        Image imgLeft = Properties.Resources.PanzerLeft1;
-        Image imgDown = Properties.Resources.PanzerDown1;
+        Image[] imgRight = new Image[] 
+        {
+            Properties.Resources.PanzerRight1
+                , Properties.Resources.PanzerRight2
+        };
+        Image[] imgUp = new Image[]
+        {
+            Properties.Resources.PanzerUp1
+                , Properties.Resources.PanzerUp2
+        };
+        Image[] imgLeft = new Image[]
+        {
+            Properties.Resources.PanzerLeft1
+                , Properties.Resources.PanzerLeft2
+        };
+        Image[] imgDown = new Image[]
+        {
+            Properties.Resources.PanzerDown1
+                , Properties.Resources.PanzerDown1
+        };
 
-        public Image ImgRight
+        public Image[] ImgRight
         {
             get
             {
@@ -24,7 +40,7 @@ namespace Panzer
                 imgRight = value;
             }
         }
-        public Image ImgUp
+        public Image[] ImgUp
         {
             get
             {
@@ -35,7 +51,7 @@ namespace Panzer
                 imgUp = value;
             }
         }
-        public Image ImgLeft
+        public Image[] ImgLeft
         {
             get
             {
@@ -46,7 +62,7 @@ namespace Panzer
                 imgLeft = value;
             }
         }
-        public Image ImgDown
+        public Image[] ImgDown
         {
             get
             {

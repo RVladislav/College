@@ -104,28 +104,28 @@
     <None Include="Resources\MyIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerDown1.bmp" />
+    <None Include="Resources\Down\PanzerDown1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerDown2.bmp" />
+    <None Include="Resources\Down\PanzerDown2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerLeft1.bmp" />
+    <None Include="Resources\Left\PanzerLeft1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerLeft2.bmp" />
+    <None Include="Resources\Left\PanzerLeft2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerRight1.bmp" />
+    <None Include="Resources\Right\PanzerRight1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerRight2.bmp" />
+    <None Include="Resources\Right\PanzerRight2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerUp1.bmp" />
+    <None Include="Resources\Up\PanzerUp1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PanzerUp2.bmp" />
+    <None Include="Resources\Up\PanzerUp2.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
