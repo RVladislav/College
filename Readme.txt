@@ -1,7 +1,7 @@
 Main
 ____
-Razhnov VG
-Russiz, SPb
+Razhnov Vladislav G.
+Russia, SPb
 ___________
 
 My main repository. 
