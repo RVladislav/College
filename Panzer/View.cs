@@ -33,7 +33,9 @@ namespace Panzer
 
         void DrawPanzer(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(model.panzer.Img, new Point(model.panzer.X, model.panzer.Y));
+            //e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            //e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.DrawImage(model.panzer.CurrentImg, new Point(model.panzer.X, model.panzer.Y));
         }
 
         void Draw(PaintEventArgs e)
@@ -47,7 +49,7 @@ namespace Panzer
             }
 
             Thread.Sleep(model.speedGame);
-
+            
             Invalidate();
         }
 

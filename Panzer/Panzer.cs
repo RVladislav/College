@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Threading;
 
 namespace Panzer
 {
@@ -11,9 +12,13 @@ namespace Panzer
         int x, y, direct_x, direct_y;
         int sizeField;
 
-        Image img;
+        Image[] img;
+        Image currentImg;
+
         PanzerIMG panzerImg = new PanzerIMG();
         static Random R;
+
+        
 
         public Panzer(int sizeField)
         {
@@ -24,9 +29,15 @@ namespace Panzer
             y = 80;
             Direct_x = 1;
             Direct_y = 0;
+            PutImg();
+            PutCurrentImg();
         }
 
-        public Image Img
+        public Image CurrentImg
+        {
+            get { return currentImg; }
+        }
+        public Image[] Img
         {
             get
             {
@@ -79,8 +90,10 @@ namespace Panzer
             }
         }
 
+        
         public void Run()
         {
+            
             x += Direct_x;
             y += Direct_y;
 
@@ -88,8 +101,17 @@ namespace Panzer
             {
                 Turn();
             }
+            PutCurrentImg();
             Transparent();
         }
+
+        int k;
+        private void PutCurrentImg()
+        {
+            currentImg = img[k];
+            k++;
+            if (k == 4) k = 0;
+        }        
 
         public void Turn()
         {
@@ -120,8 +142,12 @@ namespace Panzer
                 }
             }
             PutImg();
+            
 
         }
+
+       
+
         public void Transparent()
         {
             if (x + 20 < 0) x = sizeField;//Left
