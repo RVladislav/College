@@ -56,31 +56,34 @@
     <Compile Include="ICollision.cs" />
     <Compile Include="IRun.cs" />
     <Compile Include="ITakeApple.cs" />
+    <Compile Include="ITransparent.cs" />
     <Compile Include="ITurn.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Panzer.cs" />
     <Compile Include="PanzerIMG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wall.cs" />
+    <Compile Include="WallImg.cs" />
     <EmbeddedResource Include="Controller.resx">
       <DependentUpon>Controller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,22 +98,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MyIcon.ico" />
+    <None Include="Resources\Wall.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\MyIcon.ico" />
+    <None Include="Resources\MyIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\Tank.gif" />
+    <None Include="Resources\TankEnemy.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\TankG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\TankEnemy.png" />
+    <None Include="Resources\TankEnemyDown.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\TankG.png" />
+    <None Include="Resources\TankEnemyLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TankEnemyRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TankEnemyUp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

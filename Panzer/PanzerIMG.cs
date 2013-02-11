@@ -8,17 +8,53 @@ namespace Panzer
 {
     class PanzerIMG
     {
-        Image img = Properties.Resources.TankEnemy;
+        Image imgRight = Properties.Resources.TankEnemyRight;
+        Image imgUp = Properties.Resources.TankEnemyUp;
+        Image imgLeft = Properties.Resources.TankEnemyLeft;
+        Image imgDown = Properties.Resources.TankEnemyDown;
 
-        public Image Img
+        public Image ImgRight
         {
             get
             {
-                return img;
+                return imgRight;
             }
             set
             {
-                img = value;
+                imgRight = value;
+            }
+        }
+        public Image ImgUp
+        {
+            get
+            {
+                return imgUp;
+            }
+            set
+            {
+                imgUp = value;
+            }
+        }
+        public Image ImgLeft
+        {
+            get
+            {
+                return imgLeft;
+            }
+            set
+            {
+                imgLeft = value;
+            }
+        }
+        public Image ImgDown
+        {
+            get
+            {
+                return imgDown;
+            }
+            set
+            {
+                imgDown = value;
             }
         }
     }

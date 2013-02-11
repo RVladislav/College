@@ -16,17 +16,38 @@ namespace Panzer
         public View(Model model)
         {
             InitializeComponent();
-            this.model = model;            
+            this.model = model;
+        }
+
+        void DrawWall(PaintEventArgs e)
+        {
+            for (int y = 20; y < 300; y += 40)
+            {
+                for (int x = 20; x < 260; x += 40)
+                {
+                    e.Graphics.DrawImage(model.wall.Img, new Point(x, y));
+                }
+            }
+
+        }
+
+        void DrawPanzer(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(model.panzer.Img, new Point(model.panzer.X, model.panzer.Y));
         }
 
         void Draw(PaintEventArgs e)
         {
-            e.Graphics.DrawImage(model.panzer.Img, new Point(model.panzer.X, model.panzer.Y));
+            DrawWall(e);
+            DrawPanzer(e);
+
             if (model.gameStatus != GameStatus.playing)
             {
                 return;
             }
+
             Thread.Sleep(model.speedGame);
+
             Invalidate();
         }
 

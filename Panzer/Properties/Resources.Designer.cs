@@ -61,11 +61,51 @@ namespace Panzer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon MyIcon {
+            get {
+                object obj = ResourceManager.GetObject("MyIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TankEnemy {
+        internal static System.Drawing.Bitmap TankEnemyDown {
             get {
-                object obj = ResourceManager.GetObject("TankEnemy", resourceCulture);
+                object obj = ResourceManager.GetObject("TankEnemyDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankEnemyLeft {
+            get {
+                object obj = ResourceManager.GetObject("TankEnemyLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankEnemyRight {
+            get {
+                object obj = ResourceManager.GetObject("TankEnemyRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TankEnemyUp {
+            get {
+                object obj = ResourceManager.GetObject("TankEnemyUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +116,16 @@ namespace Panzer.Properties {
         internal static System.Drawing.Bitmap TankG {
             get {
                 object obj = ResourceManager.GetObject("TankG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wall {
+            get {
+                object obj = ResourceManager.GetObject("Wall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,17 +17,17 @@ namespace Panzer
         Thread modelPlay;
 
         public Controller_frmMain() : this(260) { }
-        public Controller_frmMain(int sizeField) : this(sizeField, 5) {}
+        public Controller_frmMain(int sizeField) : this(sizeField, 5) { }
         public Controller_frmMain(int sizeField, int amountPanzer) : this(sizeField, amountPanzer, 5) { }
         public Controller_frmMain(int sizeField, int amountPanzer, int amountApples) : this(sizeField, amountPanzer, amountApples, 50) { }
-        
+
         public Controller_frmMain(int sizeField, int amountPanzer, int amountApples, int speedGame)
         {
             InitializeComponent();
             model = new Model(sizeField, amountApples, amountApples, speedGame);
             view = new View(model);
-            this.Controls.Add(view); 
-            model.gameStatus = GameStatus.stopping;           
+            this.Controls.Add(view);
+            model.gameStatus = GameStatus.stopping;
         }
 
         private void btnStartStop_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Panzer
                 modelPlay.Abort();
                 model.gameStatus = GameStatus.stopping;
             }
-            DialogResult dr = MessageBox.Show("Конец игры?", "Panzer - Razhnov VG",MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk,MessageBoxDefaultButton.Button1);
+            DialogResult dr = MessageBox.Show("Конец игры?", "Panzer - Razhnov VG", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1);
             if (dr == DialogResult.Yes)
             {
                 e.Cancel = false;

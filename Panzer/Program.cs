@@ -30,7 +30,7 @@ namespace Panzer
                     break;
                 default: cf = new Controller_frmMain();
                     break;
-            }            
+            }
             Application.Run(cf);
         }
     }

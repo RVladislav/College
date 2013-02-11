@@ -16,6 +16,8 @@ namespace Panzer
 
         public Panzer panzer;
 
+        public Wall wall;
+
         public Model(int sizeField, int amountPanzer, int amountApples, int speedGame)
         {
             this.sizeField = sizeField;
@@ -23,7 +25,8 @@ namespace Panzer
             this.amountApples = amountApples;
             this.speedGame = speedGame;
 
-            panzer = new Panzer();
+            panzer = new Panzer(sizeField);
+            wall = new Wall();
         }
 
         public void Play()

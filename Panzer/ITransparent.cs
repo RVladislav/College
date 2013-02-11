@@ -5,13 +5,8 @@ using System.Text;
 
 namespace Panzer
 {
-    enum GameStatus
+    interface ITransparent
     {
-        playing
-            ,
-        stopping
-            ,
-        loose
-            , win
+        void Transparent();
     }
 }
