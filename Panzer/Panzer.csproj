@@ -104,22 +104,28 @@
     <None Include="Resources\MyIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankEnemy.png" />
+    <None Include="Resources\PanzerDown1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankG.png" />
+    <None Include="Resources\PanzerDown2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankEnemyDown.png" />
+    <None Include="Resources\PanzerLeft1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankEnemyLeft.png" />
+    <None Include="Resources\PanzerLeft2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankEnemyRight.png" />
+    <None Include="Resources\PanzerRight1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TankEnemyUp.png" />
+    <None Include="Resources\PanzerRight2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanzerUp1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanzerUp2.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

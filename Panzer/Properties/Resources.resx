@@ -121,20 +121,29 @@
   <data name="MyIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MyIcon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TankEnemyDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TankEnemyDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PanzerDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerDown1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TankEnemyLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TankEnemyLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PanzerDown2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerDown2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TankEnemyRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TankEnemyRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PanzerLeft1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerLeft1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TankEnemyUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TankEnemyUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PanzerLeft2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerLeft2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TankG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TankG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PanzerRight1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerRight1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanzerRight2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerRight2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanzerUp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerUp1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PanzerUp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PanzerUp2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

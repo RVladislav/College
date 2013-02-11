@@ -8,10 +8,10 @@ namespace Panzer
 {
     class PanzerIMG
     {
-        Image imgRight = Properties.Resources.TankEnemyRight;
-        Image imgUp = Properties.Resources.TankEnemyUp;
-        Image imgLeft = Properties.Resources.TankEnemyLeft;
-        Image imgDown = Properties.Resources.TankEnemyDown;
+        Image imgRight = Properties.Resources.PanzerRight1;
+        Image imgUp = Properties.Resources.PanzerUp1;
+        Image imgLeft = Properties.Resources.PanzerLeft1;
+        Image imgDown = Properties.Resources.PanzerDown1;
 
         public Image ImgRight
         {
