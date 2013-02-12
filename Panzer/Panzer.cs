@@ -172,5 +172,12 @@ namespace Panzer
             if (Direct_y == 1) img = panzerImg.ImgDown;
             if (Direct_y == -1) img = panzerImg.ImgUp;
         }
+
+        public void TurnAround()
+        {
+            Direct_x = -1 * Direct_x;
+            Direct_y = -1 * Direct_y;
+            PutImg();
+        }
     }
 }

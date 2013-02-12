@@ -67,6 +67,19 @@ namespace Panzer
             {
                 foreach(Panzer t in panzers)
                     t.Run();
+                for(int i=0;i<panzers.Count-1;i++)
+                    for(int j=i+1;j<panzers.Count;j++)
+                        if (
+                            ((Math.Abs(panzers[i].X - panzers[j].X) <= 20) && (panzers[i].Y==panzers[j].Y))
+                            ||
+                            ((Math.Abs(panzers[i].Y - panzers[j].Y) <= 20) && (panzers[i].X == panzers[j].X))
+                            ||
+                            ((Math.Abs(panzers[i].X - panzers[j].X) <= 20) && (Math.Abs(panzers[i].Y - panzers[j].Y) <= 20))
+                            )
+                        {
+                            panzers[i].TurnAround();
+                            panzers[j].TurnAround();
+                        }
                 Thread.Sleep(speedGame);
             }
         }
