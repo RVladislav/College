@@ -20,13 +20,13 @@ namespace Panzer
 
         
 
-        public Panzer(int sizeField)
+        public Panzer(int sizeField, int x, int y)
         {
             this.sizeField = sizeField;
             img = panzerImg.ImgRight;
             R = new Random();
-            x = 80;
-            y = 80;
+            this.x = x;
+            this.y = y;
             Direct_x = 1;
             Direct_y = 0;
             PutImg();

@@ -14,9 +14,16 @@ namespace Panzer
             , speedGame;
         public GameStatus gameStatus;
 
-        public Panzer panzer;
+        List<Panzer> panzers;
 
         public Wall wall;
+
+        Random R;
+
+        internal List<Panzer> Panzers
+        {
+            get { return panzers; }
+        }
 
         public Model(int sizeField, int amountPanzer, int amountApples, int speedGame)
         {
@@ -25,15 +32,41 @@ namespace Panzer
             this.amountApples = amountApples;
             this.speedGame = speedGame;
 
-            panzer = new Panzer(sizeField);
+            R = new Random();
+
+            panzers = new List<Panzer>();
+            CreatePanzers();
             wall = new Wall();
+        }
+
+        private void CreatePanzers()
+        {
+            int x, y;
+            while (panzers.Count < amountPanzer)
+            {
+                x = R.Next(6) * 40;
+                y = R.Next(6) * 40;
+
+                bool flag = true;
+
+                foreach (Panzer t in panzers)
+                    if (t.X == x && t.Y == y)
+                    {
+                        flag = false;
+                        break;
+                    }
+                if(flag)
+                    panzers.Add(new Panzer(sizeField,x,y));
+            }
+            
         }
 
         public void Play()
         {
             while (gameStatus == GameStatus.playing)
             {
-                panzer.Run();
+                foreach(Panzer t in panzers)
+                    t.Run();
                 Thread.Sleep(speedGame);
             }
         }
