@@ -18,7 +18,7 @@ namespace Panzer
 
         public Wall wall;
 
-        Random R;
+        static Random R;
 
         internal List<Panzer> Panzers
         {

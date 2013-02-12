@@ -27,8 +27,16 @@ namespace Panzer
             R = new Random();
             this.x = x;
             this.y = y;
-            Direct_x = 1;
-            Direct_y = 0;
+
+            Direct_x = R.Next(-1,2);
+            if (Direct_x == 0)
+            {
+                Direct_y = 0;
+                while(Direct_y==0)
+                    Direct_y = R.Next(-1, 2);
+            }
+            else
+                Direct_y = 0;
             PutImg();
             PutCurrentImg();
         }
