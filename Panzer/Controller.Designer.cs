@@ -48,12 +48,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 312);
+            this.ClientSize = new System.Drawing.Size(444, 332);
             this.Controls.Add(this.btnStartStop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(460, 350);
-            this.MinimumSize = new System.Drawing.Size(460, 350);
+            this.MaximumSize = new System.Drawing.Size(460, 370);
+            this.MinimumSize = new System.Drawing.Size(460, 370);
             this.Name = "Controller_frmMain";
             this.Text = "Panzer - Razhnov VG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_frmMain_FormClosing);

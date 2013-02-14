@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "View";
-            this.Size = new System.Drawing.Size(260, 300);
+            this.Size = new System.Drawing.Size(260, 320);
             this.ResumeLayout(false);
 
         }
