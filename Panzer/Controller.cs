@@ -63,5 +63,51 @@ namespace Panzer
                 e.Cancel = true;
             }
         }
+
+        private void Manipulater_Person(object sender, KeyPressEventArgs e)
+        {
+            this.Text = e.KeyChar.ToString();
+            switch (e.KeyChar)
+            {
+                case 'a':
+                    model.Pers.NextDirect_x = -1;
+                    model.Pers.NextDirect_y = 0;
+                    break;
+                case 'w':
+                    model.Pers.NextDirect_x = 0;
+                    model.Pers.NextDirect_y = -1;
+                    break;
+                case 'd':
+                    model.Pers.NextDirect_x = 1;
+                    model.Pers.NextDirect_y = 0;
+                    break;
+                case 's':
+                    model.Pers.NextDirect_x = 0;
+                    model.Pers.NextDirect_y = 1;
+                    break;
+                case 'ф':
+                    model.Pers.NextDirect_x = -1;
+                    model.Pers.NextDirect_y = 0;
+                    break;
+                case 'ц':
+                    model.Pers.NextDirect_x = 0;
+                    model.Pers.NextDirect_y = -1;
+                    break;
+                case 'в':
+                    model.Pers.NextDirect_x = 1;
+                    model.Pers.NextDirect_y = 0;
+                    break;
+                case 'ы':
+                    model.Pers.NextDirect_x = 0;
+                    model.Pers.NextDirect_y = 1;
+                    break;
+                default: break;
+            }
+        }
+
+        private void btnStartStop_Leave(object sender, EventArgs e)
+        {
+            btnStartStop.Focus();
+        }
     }
 }

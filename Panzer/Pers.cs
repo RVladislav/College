@@ -8,7 +8,7 @@ namespace Panzer
 {
     class Pers : IRun, ITurn, ITransparent, ICurrentPic
     {
-        int x, y, direct_x, direct_y;
+        int x, y, direct_x, direct_y, nextDirect_x, nextDirect_y;
         int sizeField;
 
         Image[] img;
@@ -26,6 +26,9 @@ namespace Panzer
 
             Direct_x = 0;
             Direct_y = -1;
+
+            nextDirect_x = 0;
+            nextDirect_y = -1;
             
             PutImg();
             PutCurrentImg();
@@ -110,8 +113,40 @@ namespace Panzer
             }
         }
 
+        public int NextDirect_x
+        {
+            get
+            {
+                return nextDirect_x;
+            }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    nextDirect_x = value;
+                else
+                    nextDirect_x = 0;
+            }
+        }
+
+        public int NextDirect_y
+        {
+            get
+            {
+                return nextDirect_y;
+            }
+            set
+            {
+                if (value == 0 || value == 1 || value == -1)
+                    nextDirect_y = value;
+                else
+                    nextDirect_y = 0;
+            }
+        }
+
         public void Turn()
         {
+            Direct_x = NextDirect_x;
+            Direct_y = NextDirect_y;
             PutImg();
         }
 

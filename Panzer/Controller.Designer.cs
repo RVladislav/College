@@ -41,6 +41,8 @@
             this.btnStartStop.Text = "Start | Stop";
             this.btnStartStop.UseVisualStyleBackColor = true;
             this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
+            this.btnStartStop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Manipulater_Person);
+            this.btnStartStop.Leave += new System.EventHandler(this.btnStartStop_Leave);
             // 
             // Controller_frmMain
             // 
@@ -55,6 +57,7 @@
             this.Name = "Controller_frmMain";
             this.Text = "Panzer - Razhnov VG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Controller_frmMain_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Manipulater_Person);
             this.ResumeLayout(false);
 
         }
