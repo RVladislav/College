@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace Panzer
 {
-    class WallImg
+    class StarImg
     {
-        Image img = Properties.Resources.Wall;
+        Image img = Properties.Resources.Star;
 
         public Image Img
         {

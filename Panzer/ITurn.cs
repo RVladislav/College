@@ -8,5 +8,6 @@ namespace Panzer
     interface ITurn
     {
         void Turn();
+        void TurnAround();
     }
 }

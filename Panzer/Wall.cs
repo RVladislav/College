@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Panzer
 {
-    class Wall
+    class Wall : IPic
     {
         WallImg wallImg = new WallImg();
         Image img;

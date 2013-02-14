@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Panzer
 {
-    class PanzerIMG
+    class PanzerImg
     {
         Image[] imgRight = new Image[] 
         {

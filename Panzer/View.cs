@@ -40,7 +40,8 @@ namespace Panzer
         void Draw(PaintEventArgs e)
         {
             DrawWall(e);
-            DrawPanzer(e);
+            DrawStars(e);
+            DrawPanzer(e);            
 
             if (model.gameStatus != GameStatus.playing)
             {
@@ -50,6 +51,12 @@ namespace Panzer
             Thread.Sleep(model.speedGame);
             
             Invalidate();
+        }
+
+        private void DrawStars(PaintEventArgs e)
+        {
+            foreach (Stars s in model.Stars)
+                e.Graphics.DrawImage(s.Img, new Point(s.X, s.Y));
         }
 
         protected override void OnPaint(PaintEventArgs e)

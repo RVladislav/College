@@ -10,11 +10,12 @@ namespace Panzer
     {
         public int sizeField
             , amountPanzer
-            , amountApples
+            , amountStars
             , speedGame;
         public GameStatus gameStatus;
 
         List<Panzer> panzers;
+        List<Stars> stars;
 
         public Wall wall;
 
@@ -25,18 +26,46 @@ namespace Panzer
             get { return panzers; }
         }
 
+        internal List<Stars> Stars
+        {
+            get { return stars; }
+        }
+
         public Model(int sizeField, int amountPanzer, int amountApples, int speedGame)
         {
             this.sizeField = sizeField;
             this.amountPanzer = amountPanzer;
-            this.amountApples = amountApples;
+            this.amountStars = amountApples;
             this.speedGame = speedGame;
 
             R = new Random();
 
             panzers = new List<Panzer>();
+            stars = new List<Stars>();
+            CreateStars();
             CreatePanzers();
             wall = new Wall();
+        }
+
+        private void CreateStars()
+        {
+            int x, y;
+            while (stars.Count < amountStars)
+            {
+                x = R.Next(6) * 40;
+                y = R.Next(6) * 40;
+
+                bool flag = true;
+
+                foreach (Stars s in stars)
+                    if (s.X == x && s.Y == y)
+                    {
+                        flag = false;
+                        break;
+                    }
+                if (flag)
+                   stars.Add(new Stars(x, y));
+            }
         }
 
         private void CreatePanzers()
