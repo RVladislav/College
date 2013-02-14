@@ -8,10 +8,13 @@ namespace Panzer
 {
     class Model
     {
-        public int sizeField
+        int sizeField
             , amountPanzer
             , amountStars
-            , speedGame;
+            , collectedStars;
+
+        public int speedGame;
+
         public GameStatus gameStatus;
 
         List<Panzer> panzers;
@@ -37,12 +40,13 @@ namespace Panzer
             get { return pers; }
         }
 
-        public Model(int sizeField, int amountPanzer, int amountApples, int speedGame)
+        public Model(int sizeField, int amountPanzer, int amountStars, int speedGame)
         {
             this.sizeField = sizeField;
             this.amountPanzer = amountPanzer;
-            this.amountStars = amountApples;
+            this.amountStars = amountStars;
             this.speedGame = speedGame;
+            collectedStars = 0;
 
             R = new Random();
 
@@ -58,8 +62,13 @@ namespace Panzer
 
         private void CreateStars()
         {
+            CreateStars(0);
+        }
+
+        private void CreateStars(int newStar)
+        {
             int x, y;
-            while (stars.Count < amountStars)
+            while (stars.Count < amountStars + newStar)
             {
                 x = R.Next(6) * 40;
                 y = R.Next(6) * 40;
@@ -119,6 +128,15 @@ namespace Panzer
                             panzers[i].TurnAround();
                             panzers[j].TurnAround();
                         }
+                for (int i = 0; i < Stars.Count; i++)
+                {
+                    if (Pers.X == Stars[i].X && Pers.Y == Stars[i].Y)
+                    {
+                        collectedStars++;
+                        stars[i] = new Stars(0, 310);
+                        CreateStars(collectedStars);
+                    }
+                }
                 Thread.Sleep(speedGame);
             }
         }
