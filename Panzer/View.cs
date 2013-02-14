@@ -41,7 +41,8 @@ namespace Panzer
         {
             DrawWall(e);
             DrawStars(e);
-            DrawPanzer(e);            
+            DrawPanzer(e);
+            DrawPers(e);
 
             if (model.gameStatus != GameStatus.playing)
             {
@@ -51,6 +52,11 @@ namespace Panzer
             Thread.Sleep(model.speedGame);
             
             Invalidate();
+        }
+
+        private void DrawPers(PaintEventArgs e)
+        {
+            e.Graphics.DrawImage(model.Pers.CurrentImg, new Point(model.Pers.X, model.Pers.Y));
         }
 
         private void DrawStars(PaintEventArgs e)

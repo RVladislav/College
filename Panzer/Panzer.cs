@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Panzer
 {
-    class Panzer : IRun, ITurn, ITransparent, ICurrentPic
+    class Panzer : IRun, ITurn, ITransparent, ICurrentPic, ITurnArround
     {
         int x, y, direct_x, direct_y;
         int sizeField;
@@ -16,9 +16,7 @@ namespace Panzer
         Image currentImg;
 
         PanzerImg panzerImg = new PanzerImg();
-        static Random R;
-
-        
+        static Random R;        
 
         public Panzer(int sizeField, int x, int y)
         {

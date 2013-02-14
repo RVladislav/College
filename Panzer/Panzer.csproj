@@ -76,9 +76,12 @@
     <Compile Include="IRun.cs" />
     <Compile Include="ITransparent.cs" />
     <Compile Include="ITurn.cs" />
+    <Compile Include="ITurnArround.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Panzer.cs" />
     <Compile Include="PanzerImg.cs" />
+    <Compile Include="Pers.cs" />
+    <Compile Include="PersImg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -125,28 +128,28 @@
     <None Include="Resources\MyIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Down\PanzerDown1.bmp" />
+    <None Include="Resources\Panzer\Down\PanzerDown1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Down\PanzerDown2.bmp" />
+    <None Include="Resources\Panzer\Down\PanzerDown2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Left\PanzerLeft1.bmp" />
+    <None Include="Resources\Panzer\Left\PanzerLeft1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Left\PanzerLeft2.bmp" />
+    <None Include="Resources\Panzer\Left\PanzerLeft2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Right\PanzerRight1.bmp" />
+    <None Include="Resources\Panzer\Right\PanzerRight1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Right\PanzerRight2.bmp" />
+    <None Include="Resources\Panzer\Right\PanzerRight2.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Up\PanzerUp1.bmp" />
+    <None Include="Resources\Panzer\Up\PanzerUp1.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Up\PanzerUp2.bmp" />
+    <None Include="Resources\Panzer\Up\PanzerUp2.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyIcon.ico" />

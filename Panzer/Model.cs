@@ -16,6 +16,7 @@ namespace Panzer
 
         List<Panzer> panzers;
         List<Stars> stars;
+        Pers pers;
 
         public Wall wall;
 
@@ -31,6 +32,11 @@ namespace Panzer
             get { return stars; }
         }
 
+        internal Pers Pers
+        {
+            get { return pers; }
+        }
+
         public Model(int sizeField, int amountPanzer, int amountApples, int speedGame)
         {
             this.sizeField = sizeField;
@@ -42,8 +48,11 @@ namespace Panzer
 
             panzers = new List<Panzer>();
             stars = new List<Stars>();
+
             CreateStars();
             CreatePanzers();
+
+            pers = new Pers(sizeField);
             wall = new Wall();
         }
 
@@ -96,6 +105,7 @@ namespace Panzer
             {
                 foreach(Panzer t in panzers)
                     t.Run();
+                Pers.Run();
                 for(int i=0;i<panzers.Count-1;i++)
                     for(int j=i+1;j<panzers.Count;j++)
                         if (

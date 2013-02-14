@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Panzer
 {
-    interface ITurn
+    interface ITurnArround
     {
-        void Turn();
+        void TurnAround();
     }
 }
