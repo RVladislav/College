@@ -150,8 +150,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyIcon.ico" />
-    <None Include="Resource\Star.bmp" />
-    <None Include="Resource\Star.png" />
+    <Content Include="Resources\Pers\Down\PDown %281%29.bmp" />
+    <Content Include="Resources\Pers\Down\PDown %282%29.bmp" />
+    <Content Include="Resources\Pers\Left\PLeft %281%29.bmp" />
+    <Content Include="Resources\Pers\Left\PLeft %282%29.bmp" />
+    <Content Include="Resources\Pers\Right\PRight %281%29.bmp" />
+    <Content Include="Resources\Pers\Right\PRight %282%29.bmp" />
+    <Content Include="Resources\Pers\Up\PUp %281%29.bmp" />
+    <Content Include="Resources\Pers\Up\PUp %282%29.bmp" />
+    <None Include="Resources\Star.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">

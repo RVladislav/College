@@ -145,8 +145,32 @@
   <data name="PanzerUp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Up\PanzerUp2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PDown__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Down\PDown (1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PDown__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Down\PDown (2).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PLeft__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Left\PLeft (1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PLeft__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Left\PLeft (2).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PRight__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Right\PRight (1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PRight__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Right\PRight (2).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PUp__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Up\PUp (1).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PUp__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pers\Up\PUp (2).bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\Star.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Star.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
