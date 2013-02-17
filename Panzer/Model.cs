@@ -133,9 +133,13 @@ namespace Panzer
                     if (Pers.X == Stars[i].X && Pers.Y == Stars[i].Y)
                     {
                         collectedStars++;
-                        stars[i] = new Stars(0, 310);
+                        stars[i] = new Stars((collectedStars-1)*20, 300);
                         CreateStars(collectedStars);
                     }
+                }
+                if (collectedStars >= amountStars)
+                {
+                    gameStatus = GameStatus.win;
                 }
                 Thread.Sleep(speedGame);
             }

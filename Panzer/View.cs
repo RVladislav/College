@@ -61,8 +61,8 @@ namespace Panzer
 
         private void DrawStars(PaintEventArgs e)
         {
-            foreach (Stars s in model.Stars)
-                e.Graphics.DrawImage(s.Img, new Point(s.X, s.Y));
+            for (int i = 0; i < model.Stars.Count;i++ )
+                e.Graphics.DrawImage(model.Stars[i].Img, new Point(model.Stars[i].X, model.Stars[i].Y));
         }
 
         protected override void OnPaint(PaintEventArgs e)
