@@ -145,7 +145,7 @@ namespace Panzer
 
                 for (int i = 0; i < Stars.Count; i++)
                 {
-                    if (Pers.X == Stars[i].X && Pers.Y == Stars[i].Y)
+                    if (Math.Abs(Pers.X - Stars[i].X) < 4 && Math.Abs(Pers.Y - Stars[i].Y) < 4)
                     {
                         collectedStars++;
                         stars[i] = new Stars((collectedStars-1)*20, 300);

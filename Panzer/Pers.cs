@@ -152,11 +152,20 @@ namespace Panzer
 
         public void Transparent()
         {
-            if (x + 20 < 0) x = sizeField;//Left
-            if (x > sizeField) x = -19;//Right
-            if (y + 20 < 0) y = 300;//Top
-            if (y > 300) y = -19;//Bottom
-            // 300 - Bottom's border
+            //if (x + 20 < 0) x = sizeField;//Left
+            //if (x > sizeField) x = -19;//Right
+            //if (y + 20 < 0) y = 300;//Top
+            //if (y > 300) y = -19;//Bottom
+            //// 300 - Bottom's border
+            if (x == -1)
+                x = sizeField - 21;
+            if (x == sizeField - 19)
+                x = 1;
+            if (y == -1)
+                y = 300 - 21;
+            if (y == 300 - 19)
+                y = 1;
+            
         }
 
         public void PutImg()
