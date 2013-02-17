@@ -128,6 +128,21 @@ namespace Panzer
                             panzers[i].TurnAround();
                             panzers[j].TurnAround();
                         }
+
+                for (int i = 0; i < panzers.Count; i++)
+                {
+                    if (
+                            ((Math.Abs(panzers[i].X - pers.X) <= 19) && (panzers[i].Y == pers.Y))
+                            ||
+                            ((Math.Abs(panzers[i].Y - pers.Y) <= 19) && (panzers[i].X == pers.X))
+                            ||
+                            ((Math.Abs(panzers[i].X - pers.X) <= 19) && (Math.Abs(panzers[i].Y - pers.Y) <= 19))
+                            )
+                    {
+                        gameStatus = GameStatus.loose;
+                    }
+                }
+
                 for (int i = 0; i < Stars.Count; i++)
                 {
                     if (Pers.X == Stars[i].X && Pers.Y == Stars[i].Y)

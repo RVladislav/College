@@ -107,7 +107,7 @@ namespace Panzer
 
         private void btnStartStop_Leave(object sender, EventArgs e)
         {
-            btnStartStop.Focus();
+            btnStartPause.Focus();
         }
     }
 }

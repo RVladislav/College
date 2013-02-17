@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Controller_frmMain));
-            this.btnStartStop = new System.Windows.Forms.Button();
+            this.btnStartPause = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnStartStop
+            // btnStartPause
             // 
-            this.btnStartStop.Location = new System.Drawing.Point(357, 12);
-            this.btnStartStop.Name = "btnStartStop";
-            this.btnStartStop.Size = new System.Drawing.Size(75, 23);
-            this.btnStartStop.TabIndex = 0;
-            this.btnStartStop.Text = "Start | Stop";
-            this.btnStartStop.UseVisualStyleBackColor = true;
-            this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
-            this.btnStartStop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Manipulater_Person);
-            this.btnStartStop.Leave += new System.EventHandler(this.btnStartStop_Leave);
+            this.btnStartPause.Location = new System.Drawing.Point(357, 12);
+            this.btnStartPause.Name = "btnStartPause";
+            this.btnStartPause.Size = new System.Drawing.Size(75, 23);
+            this.btnStartPause.TabIndex = 0;
+            this.btnStartPause.Text = "Start | Pause";
+            this.btnStartPause.UseVisualStyleBackColor = true;
+            this.btnStartPause.Click += new System.EventHandler(this.btnStartStop_Click);
+            this.btnStartPause.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Manipulater_Person);
+            this.btnStartPause.Leave += new System.EventHandler(this.btnStartStop_Leave);
             // 
             // Controller_frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 332);
-            this.Controls.Add(this.btnStartStop);
+            this.Controls.Add(this.btnStartPause);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(460, 370);
@@ -64,7 +64,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnStartStop;
+        private System.Windows.Forms.Button btnStartPause;
     }
 }
 
