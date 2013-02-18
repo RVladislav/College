@@ -10,7 +10,6 @@ namespace Panzer
     class Panzer : IRun, ITurn, ITransparent, ICurrentPic, ITurnArround
     {
         PanzerImg panzerImg = new PanzerImg();
-
         private void PutImg()
         {
             if (Direct_x == 1) img = panzerImg.ImgRight;
@@ -52,6 +51,7 @@ namespace Panzer
             PutImg();
             PutCurrentImg();
         }
+
         public Image CurrentImg
         {
             get { return currentImg; }

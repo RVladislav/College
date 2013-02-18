@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Panzer
 {
-    class Hunter
+    class Hunter : Panzer
     {
+        public Hunter(int sizeField, int x, int y)
+        {
+            //4:34
+        }
     }
 }
