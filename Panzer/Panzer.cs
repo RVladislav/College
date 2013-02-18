@@ -9,14 +9,28 @@ namespace Panzer
 {
     class Panzer : IRun, ITurn, ITransparent, ICurrentPic, ITurnArround
     {
-        int x, y, direct_x, direct_y;
-        int sizeField;
-
-        Image[] img;
-        Image currentImg;
-
         PanzerImg panzerImg = new PanzerImg();
-        static Random R;        
+
+        private void PutImg()
+        {
+            if (Direct_x == 1) img = panzerImg.ImgRight;
+            if (Direct_x == -1) img = panzerImg.ImgLeft;
+            if (Direct_y == 1) img = panzerImg.ImgDown;
+            if (Direct_y == -1) img = panzerImg.ImgUp;
+        }
+
+        protected int x, y, direct_x, direct_y;
+        protected int sizeField;
+        protected Image[] img;
+        protected Image currentImg;        
+        protected static Random R;
+        protected int k;
+        protected void PutCurrentImg()
+        {
+            currentImg = img[k];
+            k++;
+            if (k == 4) k = 0;
+        }        
 
         public Panzer(int sizeField, int x, int y)
         {
@@ -38,7 +52,6 @@ namespace Panzer
             PutImg();
             PutCurrentImg();
         }
-
         public Image CurrentImg
         {
             get { return currentImg; }
@@ -50,7 +63,6 @@ namespace Panzer
                 return img;
             }
         }
-
         public int X
         {
             get
@@ -58,12 +70,10 @@ namespace Panzer
                 return x;
             }
         }
-
         public int Y
         {
             get { return y; }
         }
-
         public int Direct_x
         {
             get { return direct_x; }
@@ -79,7 +89,6 @@ namespace Panzer
                 }
             }
         }
-
         public int Direct_y
         {
             get { return direct_y; }
@@ -94,9 +103,7 @@ namespace Panzer
                     direct_y = 0;
                 }
             }
-        }
-
-        
+        }        
         public void Run()
         {
             
@@ -109,16 +116,7 @@ namespace Panzer
             }
             PutCurrentImg();
             Transparent();
-        }
-
-        int k;
-        private void PutCurrentImg()
-        {
-            currentImg = img[k];
-            k++;
-            if (k == 4) k = 0;
-        }        
-
+        }   
         public void Turn()
         {
 
@@ -151,9 +149,6 @@ namespace Panzer
             
 
         }
-
-       
-
         public void Transparent()
         {
             if (x + 20 < 0) x = sizeField;//Left
@@ -162,15 +157,6 @@ namespace Panzer
             if (y > 300) y = -19;//Bottom
             // 300 - Bottom's border
         }
-
-        public void PutImg()
-        {
-            if (Direct_x == 1) img = panzerImg.ImgRight;
-            if (Direct_x == -1) img = panzerImg.ImgLeft;
-            if (Direct_y == 1) img = panzerImg.ImgDown;
-            if (Direct_y == -1) img = panzerImg.ImgUp;
-        }
-
         public void TurnAround()
         {
             Direct_x = -1 * Direct_x;
