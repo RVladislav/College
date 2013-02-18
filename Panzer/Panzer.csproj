@@ -155,6 +155,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MyIcon.ico" />
+    <Content Include="Resources\Hunter\Down\HunterDown %281%29.bmp" />
+    <Content Include="Resources\Hunter\Down\HunterDown %282%29.bmp" />
+    <Content Include="Resources\Hunter\Left\HunterLeft %281%29.bmp" />
+    <Content Include="Resources\Hunter\Left\HunterLeft %282%29.bmp" />
+    <Content Include="Resources\Hunter\Right\HunterRight %281%29.bmp" />
+    <Content Include="Resources\Hunter\Right\HunterRight %282%29.bmp" />
+    <Content Include="Resources\Hunter\Up\HunterUp %281%29.bmp" />
+    <Content Include="Resources\Hunter\Up\HunterUp %282%29.bmp" />
     <Content Include="Resources\Pers\Down\PDown %281%29.bmp" />
     <Content Include="Resources\Pers\Down\PDown %282%29.bmp" />
     <Content Include="Resources\Pers\Left\PLeft %281%29.bmp" />
@@ -187,6 +195,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
