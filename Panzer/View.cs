@@ -31,11 +31,9 @@ namespace Panzer
 
         }
 
-        
-
         void DrawPanzer(PaintEventArgs e)
         {
-            foreach (Panzer t in model.Panzers)        
+            foreach(Panzer t in model.Panzers)
                 e.Graphics.DrawImage(t.CurrentImg, new Point(t.X, t.Y));
         }
 
