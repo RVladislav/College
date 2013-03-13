@@ -15,7 +15,7 @@ namespace Panzer
         View view;
         Model model;
         Thread modelPlay;
-
+       
         public Controller_frmMain() : this(260) { }
         public Controller_frmMain(int sizeField) : this(sizeField, 5) { }
         public Controller_frmMain(int sizeField, int amountPanzer) : this(sizeField, amountPanzer, 5) { }
@@ -109,5 +109,7 @@ namespace Panzer
         {
             btnStartPause.Focus();
         }
+
+        
     }
 }

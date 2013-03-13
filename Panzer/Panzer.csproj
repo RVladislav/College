@@ -71,8 +71,6 @@
       <DependentUpon>Controller.cs</DependentUpon>
     </Compile>
     <Compile Include="GameStatus.cs" />
-    <Compile Include="Hunter.cs" />
-    <Compile Include="HunterImg.cs" />
     <Compile Include="ICurrentPic.cs" />
     <Compile Include="IPic.cs" />
     <Compile Include="IRun.cs" />
