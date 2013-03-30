@@ -1,0 +1,8 @@
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsApp1.exe
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsApp1.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\bin\Debug\GraphicsApp1.exe
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\bin\Debug\GraphicsApp1.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsApp1.Main.resources
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsApp1.Properties.Resources.resources
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\1GraphicsApp(Main).csproj.GenerateResource.Cache
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\1GraphicsApp(Main).csprojResolveAssemblyReference.cache

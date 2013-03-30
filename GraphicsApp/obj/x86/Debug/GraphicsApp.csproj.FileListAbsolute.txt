@@ -1,0 +1,32 @@
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\bin\Debug\GraphicsApp.exe
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\bin\Debug\GraphicsApp.pdb
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GraphicsApp.Form1.resources
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GraphicsApp.Properties.Resources.resources
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GraphicsApp.exe
+C:\Documents and Settings\s264-10\Local Settings\Application Data\Temporary Projects\GraphicsApp\obj\x86\Debug\GraphicsApp.pdb
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.exe
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.pdb
+D:\Новая папка\GraphicsApp\bin\Debug\GraphicsApp.exe
+D:\Новая папка\GraphicsApp\bin\Debug\GraphicsApp.pdb
+D:\Новая папка\GraphicsApp\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.Form1.resources
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.Properties.Resources.resources
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Новая папка\GraphicsApp\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Новая папка\GraphicsApp\bin\Debug\GraphicsApp.exe
+G:\Новая папка\GraphicsApp\bin\Debug\GraphicsApp.pdb
+G:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.Form1.resources
+G:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.Properties.Resources.resources
+G:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.csproj.GenerateResource.Cache
+G:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.exe
+G:\Новая папка\GraphicsApp\obj\x86\Debug\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.exe
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\bin\Debug\GraphicsApp.exe
+F:\Work\GitHub\Collipso\GraphicsApp\bin\Debug\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.Properties.Resources.resources
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.csproj.GenerateResource.Cache
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.Main.resources

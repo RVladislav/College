@@ -1,0 +1,14 @@
+G:\Новая папка\GraphicsApp\bin\Release\GraphicsApp.exe
+G:\Новая папка\GraphicsApp\bin\Release\GraphicsApp.pdb
+G:\Новая папка\GraphicsApp\obj\x86\Release\GraphicsApp.Form1.resources
+G:\Новая папка\GraphicsApp\obj\x86\Release\GraphicsApp.Properties.Resources.resources
+G:\Новая папка\GraphicsApp\obj\x86\Release\GraphicsApp.csproj.GenerateResource.Cache
+G:\Новая папка\GraphicsApp\obj\x86\Release\GraphicsApp.exe
+G:\Новая папка\GraphicsApp\obj\x86\Release\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\bin\Release\GraphicsApp.exe
+F:\Work\GitHub\Collipso\GraphicsApp\bin\Release\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Release\GraphicsApp.Main.resources
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Release\GraphicsApp.Properties.Resources.resources
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Release\GraphicsApp.csproj.GenerateResource.Cache
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Release\GraphicsApp.exe
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Release\GraphicsApp.pdb
