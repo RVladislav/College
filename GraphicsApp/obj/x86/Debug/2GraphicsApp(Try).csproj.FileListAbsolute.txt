@@ -5,3 +5,4 @@ F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.Properties.Resourc
 F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\2GraphicsApp(Try).csproj.GenerateResource.Cache
 F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.exe
 F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\GraphicsApp.pdb
+F:\Work\GitHub\Collipso\GraphicsApp\obj\x86\Debug\2GraphicsApp(Try).csprojResolveAssemblyReference.cache

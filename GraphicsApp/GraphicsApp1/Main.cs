@@ -12,16 +12,15 @@ namespace GraphicsApp1
     public partial class Main : Form
     {
         bool doDraw = false;
-        int[] savePointX, savePointY;
-        int i = 0;
+        HashSet<int> savePointX, savePointY;
         Graphics g;
 
         public Main()
         {
             InitializeComponent();
 
-            savePointX = new int[300];
-            savePointY = new int[300];
+            savePointX = new HashSet<int>();
+            savePointY = new HashSet<int>();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -33,8 +32,7 @@ namespace GraphicsApp1
         {
             doDraw = false;
 
-            checkSplit();
-            //showArray();            
+            checkSplit();           
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -62,9 +60,8 @@ namespace GraphicsApp1
             {
                 try
                 {
-                    savePointX[i] = x;
-                    savePointY[i] = y;
-                    i++;
+                    savePointX.Add(x);
+                    savePointY.Add(y);
                 }
                 catch
                 {
@@ -74,22 +71,6 @@ namespace GraphicsApp1
             
         }
 
-        public void cls()
-        {
-            g.Clear(System.Drawing.Color.White);
-            toolblStatus.Text = null;
-            txtArrayX.Text = null;
-            txtArrayY.Text = null;
-            i = 0;
-
-            for (int j = 0; j < i; j++)
-            {
-                savePointX[j] = 0;
-                savePointY[j] = 0;
-                
-            }
-        }
-
         public void checkSplit()
         {
             //алгоритм определения замкнутой фигуры
@@ -97,7 +78,12 @@ namespace GraphicsApp1
 
         private void btnCls_Click(object sender, EventArgs e)
         {
-            cls();
+            g.Clear(System.Drawing.Color.White);
+            toolblStatus.Text = null;
+            txtArrayX.Text = null;
+            txtArrayY.Text = null;
+            savePointX.Clear();
+            savePointY.Clear();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -105,16 +91,20 @@ namespace GraphicsApp1
             txtArrayX.Text = null;
             txtArrayY.Text = null;
 
-            for (int j = 0; j < i; j++)
+            foreach (int elem in savePointX)
             {
-                txtArrayX.Text += savePointX[j].ToString() + "\n\t";
-                txtArrayY.Text += savePointY[j].ToString() + "\n\t";
+
+                txtArrayX.Text += elem.ToString() + "\n\t";
+
+            }
+            
+            foreach (int elem in savePointY)
+            {
+
+                txtArrayY.Text += elem.ToString() + "\n\t";
+
             }
         }
-
-     
-
-  
 
     }
 }
