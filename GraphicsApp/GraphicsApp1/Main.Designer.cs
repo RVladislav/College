@@ -44,6 +44,8 @@
             this.txtArrayX = new System.Windows.Forms.TextBox();
             this.txtArrayY = new System.Windows.Forms.TextBox();
             this.btnShow = new System.Windows.Forms.Button();
+            this.lblBrush = new System.Windows.Forms.Label();
+            this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,7 +107,7 @@
             this.toolStripStatusLabel2,
             this.toolblY,
             this.toolblStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 254);
+            this.statusStrip.Location = new System.Drawing.Point(0, 294);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(450, 22);
             this.statusStrip.TabIndex = 5;
@@ -180,11 +182,36 @@
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
+            // lblBrush
+            // 
+            this.lblBrush.AutoSize = true;
+            this.lblBrush.Location = new System.Drawing.Point(9, 265);
+            this.lblBrush.Name = "lblBrush";
+            this.lblBrush.Size = new System.Drawing.Size(71, 13);
+            this.lblBrush.TabIndex = 12;
+            this.lblBrush.Text = "Size of brush:";
+            // 
+            // cmbSizeBrush
+            // 
+            this.cmbSizeBrush.FormattingEnabled = true;
+            this.cmbSizeBrush.Items.AddRange(new object[] {
+            "Small",
+            "Normal",
+            "Big"});
+            this.cmbSizeBrush.Location = new System.Drawing.Point(86, 262);
+            this.cmbSizeBrush.Name = "cmbSizeBrush";
+            this.cmbSizeBrush.Size = new System.Drawing.Size(79, 21);
+            this.cmbSizeBrush.TabIndex = 13;
+            this.cmbSizeBrush.Text = "Small";
+            this.cmbSizeBrush.SelectedIndexChanged += new System.EventHandler(this.cmbSizeBrush_SelectedIndexChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 276);
+            this.ClientSize = new System.Drawing.Size(450, 316);
+            this.Controls.Add(this.cmbSizeBrush);
+            this.Controls.Add(this.lblBrush);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.txtArrayY);
             this.Controls.Add(this.txtArrayX);
@@ -195,12 +222,13 @@
             this.Controls.Add(this.lblWhereY);
             this.Controls.Add(this.lblWhereX);
             this.Controls.Add(this.pnlPaint);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(466, 315);
-            this.MinimumSize = new System.Drawing.Size(466, 315);
+            this.MaximumSize = new System.Drawing.Size(466, 355);
+            this.MinimumSize = new System.Drawing.Size(466, 355);
             this.Name = "Main";
-            this.Text = "Paint";
+            this.Text = "Paint and Point";
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -225,6 +253,8 @@
         private System.Windows.Forms.TextBox txtArrayX;
         private System.Windows.Forms.TextBox txtArrayY;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Label lblBrush;
+        private System.Windows.Forms.ComboBox cmbSizeBrush;
     }
 }
 

@@ -12,6 +12,9 @@ namespace GraphicsDraw
     public partial class Main : Form
     {
         bool doDraw = false;
+        int sizeBrushX = 3
+            , sizeBrushY = 3;
+
         HashSet<int> savePointX, savePointY;
         Graphics g;
 
@@ -41,7 +44,7 @@ namespace GraphicsDraw
             {
                 g = Graphics.FromHwnd(pnlPaint.Handle);
                 SolidBrush redBrush = new SolidBrush(Color.Red);
-                g.FillEllipse(redBrush, e.X, e.Y, 5, 5);
+                g.FillEllipse(redBrush, e.X, e.Y, sizeBrushX, sizeBrushY);
 
                 lblX.Text = e.X.ToString();
                 lblY.Text = e.Y.ToString();
@@ -73,17 +76,21 @@ namespace GraphicsDraw
 
         public void checkSplit()
         {
-            int elem
-                ,check;
-            foreach (elem in savePointX)
-            {
-
-            }
+            //int check;
+            //foreach (int elem in savePointX)
+            //{
+            //    check = elem;
+            //}
         }
 
         private void btnCls_Click(object sender, EventArgs e)
         {
-            g.Clear(System.Drawing.Color.White);
+            try
+            {
+                g.Clear(System.Drawing.Color.White);
+            }
+            catch {
+            }
             toolblStatus.Text = null;
             txtArrayX.Text = null;
             txtArrayY.Text = null;
@@ -108,6 +115,27 @@ namespace GraphicsDraw
 
                 txtArrayY.Text += elem.ToString() + "\n\t";
 
+            }
+        }
+
+        private void cmbSizeBrush_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string size = cmbSizeBrush.Text.ToString();
+
+            switch (size)
+            {
+                case "Small":
+                    sizeBrushX = 3;
+                    sizeBrushY = 3;
+                    break;
+                case "Normal":
+                    sizeBrushX = 5;
+                    sizeBrushY = 5;
+                    break;
+                case "Big":
+                    sizeBrushX = 7;
+                    sizeBrushY = 7;
+                    break;
             }
         }
 
