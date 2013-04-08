@@ -1,4 +1,4 @@
-﻿namespace GraphicsApp1
+﻿namespace GraphicsDraw
 {
     partial class Main
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlPaint = new System.Windows.Forms.Panel();
             this.lblWhereX = new System.Windows.Forms.Label();
             this.lblWhereY = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             this.Controls.Add(this.lblWhereY);
             this.Controls.Add(this.lblWhereX);
             this.Controls.Add(this.pnlPaint);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(466, 315);
             this.MinimumSize = new System.Drawing.Size(466, 315);

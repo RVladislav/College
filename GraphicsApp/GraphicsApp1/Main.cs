@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+//using System.ComponentModel;
+//using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+//using System.Linq;
+//using System.Text;
 using System.Windows.Forms;
 
-namespace GraphicsApp1
+namespace GraphicsDraw
 {
     public partial class Main : Form
     {
@@ -73,7 +73,12 @@ namespace GraphicsApp1
 
         public void checkSplit()
         {
-            //алгоритм определения замкнутой фигуры
+            int elem
+                ,check;
+            foreach (elem in savePointX)
+            {
+
+            }
         }
 
         private void btnCls_Click(object sender, EventArgs e)

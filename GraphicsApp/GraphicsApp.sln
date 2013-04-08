@@ -1,9 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2GraphicsApp(Try)", "2GraphicsApp(Try).csproj", "{C3AD5E92-5261-485D-A22D-50BD52E6F442}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1GraphicsApp(Main)", "GraphicsApp1\1GraphicsApp(Main).csproj", "{85F5A255-E3E1-4C83-8B6B-CCEF12B1C807}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicsDraw", "GraphicsApp1\GraphicsDraw.csproj", "{85F5A255-E3E1-4C83-8B6B-CCEF12B1C807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +9,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3AD5E92-5261-485D-A22D-50BD52E6F442}.Debug|x86.ActiveCfg = Debug|x86
-		{C3AD5E92-5261-485D-A22D-50BD52E6F442}.Debug|x86.Build.0 = Debug|x86
-		{C3AD5E92-5261-485D-A22D-50BD52E6F442}.Release|x86.ActiveCfg = Release|x86
-		{C3AD5E92-5261-485D-A22D-50BD52E6F442}.Release|x86.Build.0 = Release|x86
 		{85F5A255-E3E1-4C83-8B6B-CCEF12B1C807}.Debug|x86.ActiveCfg = Debug|x86
 		{85F5A255-E3E1-4C83-8B6B-CCEF12B1C807}.Debug|x86.Build.0 = Debug|x86
 		{85F5A255-E3E1-4C83-8B6B-CCEF12B1C807}.Release|x86.ActiveCfg = Release|x86
