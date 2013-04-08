@@ -135,17 +135,18 @@ namespace GraphicsDraw
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLoad_Click(object sender, EventArgs e)
         {
             g = Graphics.FromHwnd(pnlPaint.Handle);
-            Pen pen = new Pen(Color.Green, sizeBrushX);          
+            Pen pen = new Pen(Color.Green, sizeBrushX); 
+            SolidBrush br = new SolidBrush(Color.Green);
 
             float[] X
                 , Y;
             string numberX=""
                 , numberY="";
-            string inputX = "106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143";
-            string inputY = "78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114";
+            string inputX = "135 135 135 135";//"106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143";
+            string inputY = "117 120 135 180";//"78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114";
 
             X = new float[inputX.Length];
             Y = new float[inputY.Length];
@@ -198,9 +199,14 @@ namespace GraphicsDraw
             {
                 max = Ylenght;
             }
-            //for (int r = 0; r < max - 1; max++)
+           
+            //for (int i = 0; i <= Xlenght-1; i++)
             //{
-            //    g.DrawLine(pen, x[r], y[r], x[r + 1], y[r + 1]);
+            //    for (int j = 0; j <= Ylenght-1; j++)
+            //    {
+            //        g.DrawLine(pen, X[i], Y[j], X[i + 1], Y[j + 1]);
+            //        //g.FillEllipse(br, X[i], Y[j],sizeBrushX,sizeBrushY);
+            //    }
             //}
             
         }

@@ -46,7 +46,7 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.lblBrush = new System.Windows.Forms.Label();
             this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,22 +206,22 @@
             this.cmbSizeBrush.Text = "Small";
             this.cmbSizeBrush.SelectedIndexChanged += new System.EventHandler(this.cmbSizeBrush_SelectedIndexChanged);
             // 
-            // button1
+            // btnLoad
             // 
-            this.button1.Location = new System.Drawing.Point(314, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLoad.Location = new System.Drawing.Point(300, 260);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(97, 23);
+            this.btnLoad.TabIndex = 14;
+            this.btnLoad.Text = "Load and show";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 316);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cmbSizeBrush);
             this.Controls.Add(this.lblBrush);
             this.Controls.Add(this.btnShow);
@@ -267,7 +267,7 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Label lblBrush;
         private System.Windows.Forms.ComboBox cmbSizeBrush;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
 
