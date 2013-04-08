@@ -12,7 +12,7 @@ namespace GraphicsDraw
     public partial class Main : Form
     {
         bool doDraw = false;
-        int sizeBrushX = 3
+        byte sizeBrushX = 3
             , sizeBrushY = 3;
 
         HashSet<int> savePointX, savePointY;
@@ -68,7 +68,7 @@ namespace GraphicsDraw
                 }
                 catch
                 {
-                    toolblStatus.Text = "Массив переполнен!";
+                    toolblStatus.Text = "Full!";
                 }
             }
             
@@ -76,11 +76,7 @@ namespace GraphicsDraw
 
         public void checkSplit()
         {
-            //int check;
-            //foreach (int elem in savePointX)
-            //{
-            //    check = elem;
-            //}
+            //Проверка на замкнутость
         }
 
         private void btnCls_Click(object sender, EventArgs e)
@@ -139,5 +135,75 @@ namespace GraphicsDraw
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            g = Graphics.FromHwnd(pnlPaint.Handle);
+            Pen pen = new Pen(Color.Green, sizeBrushX);          
+
+            float[] X
+                , Y;
+            string numberX=""
+                , numberY="";
+            string inputX = "106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143";
+            string inputY = "78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114";
+
+            X = new float[inputX.Length];
+            Y = new float[inputY.Length];
+
+            int Xlenght = 0
+                ,Ylenght=0
+                ,max = 0;
+
+            for (int i = 0; i < inputX.Length; i++)
+            {
+                if (inputX[i].ToString() != " ")
+                {
+                    numberX += inputX[i].ToString();
+                }
+                else
+                {
+                    X[Xlenght] = float.Parse(numberX);
+                    numberX = "";
+                    Xlenght++;
+                }
+            }
+
+            X[Xlenght] = float.Parse(numberX);
+            numberX = "";
+            Xlenght++;
+
+            for (int i = 0; i < inputY.Length; i++)
+            {
+                if (inputY[i].ToString() != " ")
+                {
+                    numberY += inputY[i].ToString();
+                }
+                else
+                {
+                    Y[Ylenght] = float.Parse(numberY);
+                    numberY = "";
+                    Ylenght++;
+                }
+            }
+
+            Y[Ylenght] = float.Parse(numberY);
+            numberY = "";
+            Ylenght++;
+
+            if (Xlenght >= Ylenght)
+            {
+                max = Xlenght;
+            }
+            else
+            {
+                max = Ylenght;
+            }
+            //for (int r = 0; r < max - 1; max++)
+            //{
+            //    g.DrawLine(pen, x[r], y[r], x[r + 1], y[r + 1]);
+            //}
+            
+        }
+
     }
-}
+}//Razhnov Vladislav/
