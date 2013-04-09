@@ -139,8 +139,8 @@ namespace GraphicsDraw
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 float[] X
                     , Y;
                 Pen pen = new Pen(Color.Green, sizeBrushX);
@@ -151,12 +151,22 @@ namespace GraphicsDraw
                 string inputX = txtArrayX.Text;
                 string inputY = txtArrayY.Text;
 
-                X = new float[inputX.Length];
-                Y = new float[inputY.Length];
+                if (inputX.Length > inputY.Length)
+                {
+                    X = new float[inputX.Length];
+                    Y = new float[inputX.Length];
+                }
+                else
+                {
+                    X = new float[inputY.Length];
+                    Y = new float[inputY.Length];
+                }
 
                 int Xlenght = 0
                     , Ylenght = 0
-                    , n = 0;
+                    , n = 0
+                    , nNextX = 0
+                    , nNextY = 0;
 
                 toolblStatus.Text = null;
 
@@ -173,12 +183,13 @@ namespace GraphicsDraw
                         }
                         else
                         {
-                            if (int.Parse(numberX) <= pnlPaint.Size.Width)
-                            {
+                           // if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                            //{
+                            
                                 X[Xlenght] = float.Parse(numberX);
                                 numberX = "";
-                                Xlenght++;
-                            }
+                                Xlenght++;                                
+                           // }
                         }
                     }
                 }
@@ -207,12 +218,12 @@ namespace GraphicsDraw
                         }
                         else
                         {
-                            if (int.Parse(numberY) <= pnlPaint.Size.Height)
-                            {
+                            //if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                            //{
                                 Y[Ylenght] = float.Parse(numberY);
                                 numberY = "";
                                 Ylenght++;
-                            }
+                            //}
                         }
                     }
                 }
@@ -227,13 +238,38 @@ namespace GraphicsDraw
                 }
                 catch { }
                 //}
+                int max = Xlenght;
+                if (Xlenght > Ylenght)
+                {
+                    max = Xlenght;
+                }
+                else
+                {
+                    max = Ylenght;
+                }
 
                 try
                 {
-                    while (Xlenght > n || Ylenght > n)
+                    for (int i = 0; i < max; i++)
                     {
-                        g.DrawLine(pen, X[n], Y[n], X[n + 1], Y[n + 1]);
-                        n++;
+                        while (Xlenght > n)
+                        {
+                            nNextX = n + 1;
+                            nNextY = n + 1;
+
+                            if (X[nNextX] == 0)
+                            {
+                                X[nNextX] = X[nNextX - 1];
+                            }
+
+                            if (Y[nNextY] == 0)
+                            {
+                                Y[nNextY] = Y[nNextY - 1];
+                            }
+
+                            g.DrawLine(pen, X[n], Y[n], X[nNextX], Y[nNextY]);
+                            n++;
+                        }
                     }
 
                 }
@@ -243,16 +279,13 @@ namespace GraphicsDraw
                 }
                 pen.Dispose();
                 g.Dispose();
-            //}
-            //catch
-            //{
-            //    toolblStatus.Text = "X and/or Y   = NULL";
-            //}
+            }
+            catch
+            {
+                toolblStatus.Text = "X and/or Y   = NULL OR Size of array different";
+            }
         }
 
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }//Razhnov Vladislav/
