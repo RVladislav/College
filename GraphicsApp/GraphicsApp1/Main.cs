@@ -24,6 +24,12 @@ namespace GraphicsDraw
 
             savePointX = new HashSet<int>();
             savePointY = new HashSet<int>();
+
+            System.Drawing.Drawing2D.QualityMode Quality = new System.Drawing.Drawing2D.QualityMode();
+            System.Drawing.Drawing2D.SmoothingMode Smoothing = new System.Drawing.Drawing2D.SmoothingMode();
+            Quality = System.Drawing.Drawing2D.QualityMode.High;
+            Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -144,6 +150,7 @@ namespace GraphicsDraw
                 float[] X
                     , Y;
                 Pen pen = new Pen(Color.Green, sizeBrushX);
+                SolidBrush brush = new SolidBrush(Color.Green);
                 g = Graphics.FromHwnd(pnlPaint.Handle);
 
                 string numberX = ""
@@ -183,13 +190,13 @@ namespace GraphicsDraw
                         }
                         else
                         {
-                           // if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                            // if (int.Parse(numberX) <= pnlPaint.Size.Width)
                             //{
-                            
-                                X[Xlenght] = float.Parse(numberX);
-                                numberX = "";
-                                Xlenght++;                                
-                           // }
+
+                            X[Xlenght] = float.Parse(numberX);
+                            numberX = "";
+                            Xlenght++;
+                            // }
                         }
                     }
                 }
@@ -207,7 +214,7 @@ namespace GraphicsDraw
 
                 for (int i = 0; i < inputY.Length; i++)
                 {
-                    if (inputY[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
+                    if (inputY[i].ToString() != " " && inputY[i].ToString() != "\r" && inputY[i].ToString() != "\n")
                     {
                         numberY += inputY[i].ToString();
                     }
@@ -220,9 +227,9 @@ namespace GraphicsDraw
                         {
                             //if (int.Parse(numberY) <= pnlPaint.Size.Height)
                             //{
-                                Y[Ylenght] = float.Parse(numberY);
-                                numberY = "";
-                                Ylenght++;
+                            Y[Ylenght] = float.Parse(numberY);
+                            numberY = "";
+                            Ylenght++;
                             //}
                         }
                     }
@@ -250,6 +257,7 @@ namespace GraphicsDraw
 
                 try
                 {
+                    pnlPaint.Refresh();
                     for (int i = 0; i < max; i++)
                     {
                         while (Xlenght > n)
@@ -265,9 +273,19 @@ namespace GraphicsDraw
                             if (Y[nNextY] == 0)
                             {
                                 Y[nNextY] = Y[nNextY - 1];
+                            }                            
+                            
+                            switch (cmbChangeDraw.Text)
+                            {
+                                case "1":
+                                    g.DrawLine(pen, X[n], Y[n], X[nNextX], Y[nNextY]);
+                                    break;
+                                case "2":
+                                    g.FillEllipse(brush, X[n], Y[n], sizeBrushX, sizeBrushY);
+                                    break;
                             }
 
-                            g.DrawLine(pen, X[n], Y[n], X[nNextX], Y[nNextY]);
+
                             n++;
                         }
                     }

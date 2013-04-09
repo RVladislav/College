@@ -48,6 +48,7 @@
             this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.cmbChangeDraw = new System.Windows.Forms.ComboBox();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,11 +227,24 @@
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
             // 
+            // cmbChangeDraw
+            // 
+            this.cmbChangeDraw.FormattingEnabled = true;
+            this.cmbChangeDraw.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cmbChangeDraw.Location = new System.Drawing.Point(404, 261);
+            this.cmbChangeDraw.Name = "cmbChangeDraw";
+            this.cmbChangeDraw.Size = new System.Drawing.Size(34, 21);
+            this.cmbChangeDraw.TabIndex = 16;
+            this.cmbChangeDraw.Text = "1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 316);
+            this.Controls.Add(this.cmbChangeDraw);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cmbSizeBrush);
@@ -280,6 +294,7 @@
         private System.Windows.Forms.ComboBox cmbSizeBrush;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.ComboBox cmbChangeDraw;
     }
 }
 
