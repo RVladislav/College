@@ -35,7 +35,7 @@ namespace GraphicsDraw
         {
             doDraw = false;
 
-            checkSplit();           
+            checkSplit();
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -50,7 +50,7 @@ namespace GraphicsDraw
                 lblY.Text = e.Y.ToString();
 
                 savePoints(e.X, e.Y);
-                
+
             }
 
             toolblX.Text = e.X.ToString();
@@ -71,7 +71,7 @@ namespace GraphicsDraw
                     toolblStatus.Text = "Full!";
                 }
             }
-            
+
         }
 
         public void checkSplit()
@@ -85,7 +85,8 @@ namespace GraphicsDraw
             {
                 g.Clear(System.Drawing.Color.White);
             }
-            catch {
+            catch
+            {
             }
             pnlPaint.Refresh();
             toolblStatus.Text = null;
@@ -106,7 +107,7 @@ namespace GraphicsDraw
                 txtArrayX.Text += elem.ToString() + "\n\t";
 
             }
-            
+
             foreach (int elem in savePointY)
             {
 
@@ -137,14 +138,15 @@ namespace GraphicsDraw
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
-        {   
+        {
+
             float[] X
                 , Y;
             Pen pen = new Pen(Color.Green, sizeBrushX);
             g = Graphics.FromHwnd(pnlPaint.Handle);
-            
-            string numberX=""
-                , numberY="";
+
+            string numberX = ""
+                , numberY = "";
             string inputX = txtArrayX.Text;
             string inputY = txtArrayY.Text;
 
@@ -152,8 +154,8 @@ namespace GraphicsDraw
             Y = new float[inputY.Length];
 
             int Xlenght = 0
-                ,Ylenght=0
-                ,n = 0;
+                , Ylenght = 0
+                , n = 0;
 
             for (int i = 0; i < inputX.Length; i++)
             {
@@ -217,19 +219,20 @@ namespace GraphicsDraw
 
             try
             {
-                while (Xlenght>n || Ylenght>n)
+                while (Xlenght > n || Ylenght > n)
                 {
                     g.DrawLine(pen, X[n], Y[n], X[n + 1], Y[n + 1]);
                     n++;
                 }
-                
+
             }
             catch
             {
                 MessageBox.Show("Error", "Draw! Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }          
+            }
             pen.Dispose();
             g.Dispose();
         }
+
     }
 }//Razhnov Vladislav/
