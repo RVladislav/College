@@ -139,100 +139,105 @@ namespace GraphicsDraw
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
-            float[] X
-                , Y;
-            Pen pen = new Pen(Color.Green, sizeBrushX);
-            g = Graphics.FromHwnd(pnlPaint.Handle);
-
-            string numberX = ""
-                , numberY = "";
-            string inputX = txtArrayX.Text;
-            string inputY = txtArrayY.Text;
-
-            X = new float[inputX.Length];
-            Y = new float[inputY.Length];
-
-            int Xlenght = 0
-                , Ylenght = 0
-                , n = 0;
-
-            for (int i = 0; i < inputX.Length; i++)
-            {
-                if (inputX[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
-                {
-                    numberX += inputX[i].ToString();
-                }
-                else
-                {
-                    if (numberX.ToString() == "")
-                    {
-                    }
-                    else
-                    {
-                        if (int.Parse(numberX) <= pnlPaint.Size.Width)
-                        {
-                            X[Xlenght] = float.Parse(numberX);
-                            numberX = "";
-                            Xlenght++;
-                        }
-                    }
-                }
-            }
-
-            if (int.Parse(numberX) <= pnlPaint.Size.Width)
-            {
-                X[Xlenght] = float.Parse(numberX);
-                numberX = "";
-                Xlenght++;
-            }
-
-            for (int i = 0; i < inputY.Length; i++)
-            {
-                if (inputY[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
-                {
-                    numberY += inputY[i].ToString();
-                }
-                else
-                {
-                    if (numberY.ToString() == "")
-                    {
-                    }
-                    else
-                    {
-                        if (int.Parse(numberY) <= pnlPaint.Size.Height)
-                        {
-                            Y[Ylenght] = float.Parse(numberY);
-                            numberY = "";
-                            Ylenght++;
-                        }
-                    }
-                }
-            }
-
-            if (int.Parse(numberY) <= pnlPaint.Size.Height)
-            {
-                Y[Ylenght] = float.Parse(numberY);
-                numberY = "";
-                Ylenght++;
-            }
-
             try
             {
-                while (Xlenght > n || Ylenght > n)
+                float[] X
+                    , Y;
+                Pen pen = new Pen(Color.Green, sizeBrushX);
+                g = Graphics.FromHwnd(pnlPaint.Handle);
+
+                string numberX = ""
+                    , numberY = "";
+                string inputX = txtArrayX.Text;
+                string inputY = txtArrayY.Text;
+
+                X = new float[inputX.Length];
+                Y = new float[inputY.Length];
+
+                int Xlenght = 0
+                    , Ylenght = 0
+                    , n = 0;
+
+                for (int i = 0; i < inputX.Length; i++)
                 {
-                    g.DrawLine(pen, X[n], Y[n], X[n + 1], Y[n + 1]);
-                    n++;
+                    if (inputX[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
+                    {
+                        numberX += inputX[i].ToString();
+                    }
+                    else
+                    {
+                        if (numberX.ToString() == "")
+                        {
+                        }
+                        else
+                        {
+                            if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                            {
+                                X[Xlenght] = float.Parse(numberX);
+                                numberX = "";
+                                Xlenght++;
+                            }
+                        }
+                    }
                 }
 
+                if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                {
+                    X[Xlenght] = float.Parse(numberX);
+                    numberX = "";
+                    Xlenght++;
+                }
+
+                for (int i = 0; i < inputY.Length; i++)
+                {
+                    if (inputY[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
+                    {
+                        numberY += inputY[i].ToString();
+                    }
+                    else
+                    {
+                        if (numberY.ToString() == "")
+                        {
+                        }
+                        else
+                        {
+                            if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                            {
+                                Y[Ylenght] = float.Parse(numberY);
+                                numberY = "";
+                                Ylenght++;
+                            }
+                        }
+                    }
+                }
+
+                if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                {
+                    Y[Ylenght] = float.Parse(numberY);
+                    numberY = "";
+                    Ylenght++;
+                }
+
+                try
+                {
+                    while (Xlenght > n || Ylenght > n)
+                    {
+                        g.DrawLine(pen, X[n], Y[n], X[n + 1], Y[n + 1]);
+                        n++;
+                    }
+
+                }
+                catch
+                {
+                    toolblStatus.Text = "Error when drawing. Please restart and check input data";
+                }
+                pen.Dispose();
+                g.Dispose();
             }
             catch
             {
-                MessageBox.Show("Error", "Draw! Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                toolblStatus.Text = "X and/or Y   = NULL";
             }
-            pen.Dispose();
-            g.Dispose();
         }
-
     }
 }//Razhnov Vladislav/
