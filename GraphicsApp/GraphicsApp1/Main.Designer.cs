@@ -47,6 +47,7 @@
             this.lblBrush = new System.Windows.Forms.Label();
             this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -216,11 +217,22 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(198, 260);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 15;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 316);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cmbSizeBrush);
             this.Controls.Add(this.lblBrush);
@@ -268,6 +280,7 @@
         private System.Windows.Forms.Label lblBrush;
         private System.Windows.Forms.ComboBox cmbSizeBrush;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnCheck;
     }
 }
 

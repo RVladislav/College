@@ -158,6 +158,8 @@ namespace GraphicsDraw
                     , Ylenght = 0
                     , n = 0;
 
+                toolblStatus.Text = null;
+
                 for (int i = 0; i < inputX.Length; i++)
                 {
                     if (inputX[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
@@ -238,6 +240,11 @@ namespace GraphicsDraw
             {
                 toolblStatus.Text = "X and/or Y   = NULL";
             }
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }//Razhnov Vladislav/
