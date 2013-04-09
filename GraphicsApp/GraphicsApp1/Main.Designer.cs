@@ -212,7 +212,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(97, 23);
             this.btnLoad.TabIndex = 14;
-            this.btnLoad.Text = "Load and show";
+            this.btnLoad.Text = "Drawing now";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 

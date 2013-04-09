@@ -7,3 +7,4 @@ F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsDraw.pdb
 F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\bin\Release\GraphicsDraw.exe
 F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\bin\Release\GraphicsDraw.pdb
 F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsDraw.Main.resources
+F:\Work\GitHub\Collipso\GraphicsApp\GraphicsApp1\obj\x86\Debug\GraphicsDraw.csprojResolveAssemblyReference.cache

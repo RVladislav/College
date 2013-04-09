@@ -87,6 +87,7 @@ namespace GraphicsDraw
             }
             catch {
             }
+            pnlPaint.Refresh();
             toolblStatus.Text = null;
             txtArrayX.Text = null;
             txtArrayY.Text = null;
@@ -136,80 +137,99 @@ namespace GraphicsDraw
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
-        {
-            g = Graphics.FromHwnd(pnlPaint.Handle);
-            Pen pen = new Pen(Color.Green, sizeBrushX); 
-            SolidBrush br = new SolidBrush(Color.Green);
-
+        {   
             float[] X
                 , Y;
+            Pen pen = new Pen(Color.Green, sizeBrushX);
+            g = Graphics.FromHwnd(pnlPaint.Handle);
+            
             string numberX=""
                 , numberY="";
-            string inputX = "135 135 135 135";//"106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143";
-            string inputY = "117 120 135 180";//"78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114";
+            string inputX = txtArrayX.Text;
+            string inputY = txtArrayY.Text;
 
             X = new float[inputX.Length];
             Y = new float[inputY.Length];
 
             int Xlenght = 0
                 ,Ylenght=0
-                ,max = 0;
+                ,n = 0;
 
             for (int i = 0; i < inputX.Length; i++)
             {
-                if (inputX[i].ToString() != " ")
+                if (inputX[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
                 {
                     numberX += inputX[i].ToString();
                 }
                 else
                 {
-                    X[Xlenght] = float.Parse(numberX);
-                    numberX = "";
-                    Xlenght++;
+                    if (numberX.ToString() == "")
+                    {
+                    }
+                    else
+                    {
+                        if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                        {
+                            X[Xlenght] = float.Parse(numberX);
+                            numberX = "";
+                            Xlenght++;
+                        }
+                    }
                 }
             }
 
-            X[Xlenght] = float.Parse(numberX);
-            numberX = "";
-            Xlenght++;
+            if (int.Parse(numberX) <= pnlPaint.Size.Width)
+            {
+                X[Xlenght] = float.Parse(numberX);
+                numberX = "";
+                Xlenght++;
+            }
 
             for (int i = 0; i < inputY.Length; i++)
             {
-                if (inputY[i].ToString() != " ")
+                if (inputY[i].ToString() != " " && inputX[i].ToString() != "\r" && inputX[i].ToString() != "\n")
                 {
                     numberY += inputY[i].ToString();
                 }
                 else
                 {
-                    Y[Ylenght] = float.Parse(numberY);
-                    numberY = "";
-                    Ylenght++;
+                    if (numberY.ToString() == "")
+                    {
+                    }
+                    else
+                    {
+                        if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                        {
+                            Y[Ylenght] = float.Parse(numberY);
+                            numberY = "";
+                            Ylenght++;
+                        }
+                    }
                 }
             }
 
-            Y[Ylenght] = float.Parse(numberY);
-            numberY = "";
-            Ylenght++;
+            if (int.Parse(numberY) <= pnlPaint.Size.Height)
+            {
+                Y[Ylenght] = float.Parse(numberY);
+                numberY = "";
+                Ylenght++;
+            }
 
-            if (Xlenght >= Ylenght)
+            try
             {
-                max = Xlenght;
+                while (Xlenght>n || Ylenght>n)
+                {
+                    g.DrawLine(pen, X[n], Y[n], X[n + 1], Y[n + 1]);
+                    n++;
+                }
+                
             }
-            else
+            catch
             {
-                max = Ylenght;
-            }
-           
-            //for (int i = 0; i <= Xlenght-1; i++)
-            //{
-            //    for (int j = 0; j <= Ylenght-1; j++)
-            //    {
-            //        g.DrawLine(pen, X[i], Y[j], X[i + 1], Y[j + 1]);
-            //        //g.FillEllipse(br, X[i], Y[j],sizeBrushX,sizeBrushY);
-            //    }
-            //}
-            
+                MessageBox.Show("Error", "Draw! Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }          
+            pen.Dispose();
+            g.Dispose();
         }
-
     }
 }//Razhnov Vladislav/
