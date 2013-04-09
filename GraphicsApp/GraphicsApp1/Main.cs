@@ -104,14 +104,14 @@ namespace GraphicsDraw
             foreach (int elem in savePointX)
             {
 
-                txtArrayX.Text += elem.ToString() + "\n\t";
+                txtArrayX.Text += elem.ToString() + "\r\n";
 
             }
 
             foreach (int elem in savePointY)
             {
 
-                txtArrayY.Text += elem.ToString() + "\n\t";
+                txtArrayY.Text += elem.ToString() + "\r\n";
 
             }
         }
@@ -139,8 +139,8 @@ namespace GraphicsDraw
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 float[] X
                     , Y;
                 Pen pen = new Pen(Color.Green, sizeBrushX);
@@ -183,12 +183,16 @@ namespace GraphicsDraw
                     }
                 }
 
-                if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                //if (int.Parse(numberX) <= pnlPaint.Size.Width)
+                //{
+                try
                 {
                     X[Xlenght] = float.Parse(numberX);
                     numberX = "";
                     Xlenght++;
                 }
+                catch { }
+                //}
 
                 for (int i = 0; i < inputY.Length; i++)
                 {
@@ -213,12 +217,16 @@ namespace GraphicsDraw
                     }
                 }
 
-                if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                //if (int.Parse(numberY) <= pnlPaint.Size.Height)
+                //{
+                try
                 {
                     Y[Ylenght] = float.Parse(numberY);
                     numberY = "";
                     Ylenght++;
                 }
+                catch { }
+                //}
 
                 try
                 {
@@ -235,11 +243,11 @@ namespace GraphicsDraw
                 }
                 pen.Dispose();
                 g.Dispose();
-            }
-            catch
-            {
-                toolblStatus.Text = "X and/or Y   = NULL";
-            }
+            //}
+            //catch
+            //{
+            //    toolblStatus.Text = "X and/or Y   = NULL";
+            //}
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
