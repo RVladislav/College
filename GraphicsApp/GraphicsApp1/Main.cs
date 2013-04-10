@@ -29,7 +29,7 @@ namespace GraphicsDraw
             System.Drawing.Drawing2D.SmoothingMode Smoothing = new System.Drawing.Drawing2D.SmoothingMode();
             Quality = System.Drawing.Drawing2D.QualityMode.High;
             Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -40,8 +40,6 @@ namespace GraphicsDraw
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             doDraw = false;
-
-            checkSplit();
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -80,10 +78,7 @@ namespace GraphicsDraw
 
         }
 
-        public void checkSplit()
-        {
-            //Проверка на замкнутость
-        }
+
 
         private void btnCls_Click(object sender, EventArgs e)
         {
@@ -98,28 +93,38 @@ namespace GraphicsDraw
             toolblStatus.Text = null;
             txtArrayX.Text = null;
             txtArrayY.Text = null;
+            progressbar.Value = 0;
             savePointX.Clear();
             savePointY.Clear();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
+            int val = 0;
+
             txtArrayX.Text = null;
             txtArrayY.Text = null;
+                foreach (int elem in savePointX)
+                {
+                    txtArrayX.Text += elem.ToString() + "\r\n";
+                    if (val < progressbar.Maximum)
+                    {
+                        val++;
+                    }
+                    progressbar.Value = val;
+                }
 
-            foreach (int elem in savePointX)
-            {
+                foreach (int elem in savePointY)
+                {
+                    txtArrayY.Text += elem.ToString() + "\r\n";
+                    if (val < progressbar.Maximum)
+                    {
+                        val++;
+                    }
+                    progressbar.Value = val;
 
-                txtArrayX.Text += elem.ToString() + "\r\n";
-
-            }
-
-            foreach (int elem in savePointY)
-            {
-
-                txtArrayY.Text += elem.ToString() + "\r\n";
-
-            }
+                }
+                progressbar.Value = progressbar.Maximum;
         }
 
         private void cmbSizeBrush_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,9 +178,11 @@ namespace GraphicsDraw
                     , Ylenght = 0
                     , n = 0
                     , nNextX = 0
-                    , nNextY = 0;
+                    , nNextY = 0
+                    , val = 0;
 
                 toolblStatus.Text = null;
+                progressbar.Value = 0;
 
                 for (int i = 0; i < inputX.Length; i++)
                 {
@@ -199,6 +206,11 @@ namespace GraphicsDraw
                             // }
                         }
                     }
+                    if (val < progressbar.Maximum)
+                    {
+                        val++;
+                    }
+                    progressbar.Value = val;
                 }
 
                 //if (int.Parse(numberX) <= pnlPaint.Size.Width)
@@ -233,6 +245,11 @@ namespace GraphicsDraw
                             //}
                         }
                     }
+                    if (val < progressbar.Maximum)
+                    {
+                        val++;
+                    }
+                    progressbar.Value = val;
                 }
 
                 //if (int.Parse(numberY) <= pnlPaint.Size.Height)
@@ -273,8 +290,8 @@ namespace GraphicsDraw
                             if (Y[nNextY] == 0)
                             {
                                 Y[nNextY] = Y[nNextY - 1];
-                            }                            
-                            
+                            }
+
                             switch (cmbChangeDraw.Text)
                             {
                                 case "1":
@@ -288,20 +305,28 @@ namespace GraphicsDraw
 
                             n++;
                         }
+                        if (val < progressbar.Maximum)
+                        {
+                            val++;
+                        }
+                        progressbar.Value = val;
                     }
 
                 }
                 catch
                 {
                     toolblStatus.Text = "Error when drawing. Please restart and check input data";
+                    progressbar.Value = 0;
                 }
                 pen.Dispose();
                 g.Dispose();
             }
             catch
             {
-                toolblStatus.Text = "X and/or Y   = NULL OR Size of array different";
+                toolblStatus.Text = "X and/or Y   = NULL";
+                progressbar.Value = 0;
             }
+            progressbar.Value = progressbar.Maximum;
         }
 
 

@@ -47,8 +47,8 @@
             this.lblBrush = new System.Windows.Forms.Label();
             this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.btnCheck = new System.Windows.Forms.Button();
             this.cmbChangeDraw = new System.Windows.Forms.ComboBox();
+            this.progressbar = new System.Windows.Forms.ProgressBar();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,15 +218,6 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // btnCheck
-            // 
-            this.btnCheck.Location = new System.Drawing.Point(198, 260);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnCheck.TabIndex = 15;
-            this.btnCheck.Text = "Check";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            // 
             // cmbChangeDraw
             // 
             this.cmbChangeDraw.FormattingEnabled = true;
@@ -239,13 +230,21 @@
             this.cmbChangeDraw.TabIndex = 16;
             this.cmbChangeDraw.Text = "1";
             // 
+            // progressbar
+            // 
+            this.progressbar.Location = new System.Drawing.Point(12, 246);
+            this.progressbar.Name = "progressbar";
+            this.progressbar.Size = new System.Drawing.Size(252, 10);
+            this.progressbar.Step = 1;
+            this.progressbar.TabIndex = 17;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 316);
+            this.Controls.Add(this.progressbar);
             this.Controls.Add(this.cmbChangeDraw);
-            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cmbSizeBrush);
             this.Controls.Add(this.lblBrush);
@@ -293,8 +292,8 @@
         private System.Windows.Forms.Label lblBrush;
         private System.Windows.Forms.ComboBox cmbSizeBrush;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.ComboBox cmbChangeDraw;
+        private System.Windows.Forms.ProgressBar progressbar;
     }
 }
 
