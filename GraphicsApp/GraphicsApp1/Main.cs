@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Data;
 using System.Drawing;
-//using System.Linq;
-//using System.Text;
 using System.Windows.Forms;
 
 namespace GraphicsDraw
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
         bool doDraw = false;
         byte sizeBrushX = 3
             , sizeBrushY = 3;
 
-        HashSet<int> savePointX, savePointY;
+        int c = 0
+            , sizeArray = 500;
+
+        float[] savePointX
+            , savePointY;
+
         Graphics g;
 
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
 
-            savePointX = new HashSet<int>();
-            savePointY = new HashSet<int>();
+            savePointX = new float[sizeArray];
+            savePointY = new float[sizeArray];
 
             System.Drawing.Drawing2D.QualityMode Quality = new System.Drawing.Drawing2D.QualityMode();
             System.Drawing.Drawing2D.SmoothingMode Smoothing = new System.Drawing.Drawing2D.SmoothingMode();
@@ -53,32 +54,23 @@ namespace GraphicsDraw
                 lblX.Text = e.X.ToString();
                 lblY.Text = e.Y.ToString();
 
-                savePoints(e.X, e.Y);
+                if (c < sizeArray)
+                {
+                    savePointX[c] = e.X;
+                    savePointY[c] = e.Y;
+                    c++;
+                    progressBar.Value = c;
+                }
+                else
+                {
+                    toolblStatus.Text = "Full!";
+                }
 
             }
 
             toolblX.Text = e.X.ToString();
             toolblY.Text = e.Y.ToString();
         }
-
-        public void savePoints(int x, int y)
-        {
-            if (doDraw)
-            {
-                try
-                {
-                    savePointX.Add(x);
-                    savePointY.Add(y);
-                }
-                catch
-                {
-                    toolblStatus.Text = "Full!";
-                }
-            }
-
-        }
-
-
 
         private void btnCls_Click(object sender, EventArgs e)
         {
@@ -93,38 +85,22 @@ namespace GraphicsDraw
             toolblStatus.Text = null;
             txtArrayX.Text = null;
             txtArrayY.Text = null;
-            progressbar.Value = 0;
-            savePointX.Clear();
-            savePointY.Clear();
+            progressBar.Value = 0;
+            c = 0;
+            //savePointX = null;
+            //savePointY = null;
         }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            int val = 0;
-
             txtArrayX.Text = null;
             txtArrayY.Text = null;
-                foreach (int elem in savePointX)
-                {
-                    txtArrayX.Text += elem.ToString() + "\r\n";
-                    if (val < progressbar.Maximum)
-                    {
-                        val++;
-                    }
-                    progressbar.Value = val;
-                }
 
-                foreach (int elem in savePointY)
-                {
-                    txtArrayY.Text += elem.ToString() + "\r\n";
-                    if (val < progressbar.Maximum)
-                    {
-                        val++;
-                    }
-                    progressbar.Value = val;
-
-                }
-                progressbar.Value = progressbar.Maximum;
+            for (int i = 0; i < sizeArray; i++)
+            {
+                txtArrayX.Text += savePointX[i].ToString() + "\r\n";
+                txtArrayY.Text += savePointY[i].ToString() + "\r\n";
+            }
         }
 
         private void cmbSizeBrush_SelectedIndexChanged(object sender, EventArgs e)
@@ -182,7 +158,7 @@ namespace GraphicsDraw
                     , val = 0;
 
                 toolblStatus.Text = null;
-                progressbar.Value = 0;
+                progressBar.Value = 0;
 
                 for (int i = 0; i < inputX.Length; i++)
                 {
@@ -197,24 +173,16 @@ namespace GraphicsDraw
                         }
                         else
                         {
-                            // if (int.Parse(numberX) <= pnlPaint.Size.Width)
-                            //{
-
                             X[Xlenght] = float.Parse(numberX);
                             numberX = "";
                             Xlenght++;
-                            // }
+
                         }
                     }
-                    if (val < progressbar.Maximum)
-                    {
-                        val++;
-                    }
-                    progressbar.Value = val;
+                    
                 }
 
-                //if (int.Parse(numberX) <= pnlPaint.Size.Width)
-                //{
+
                 try
                 {
                     X[Xlenght] = float.Parse(numberX);
@@ -222,7 +190,7 @@ namespace GraphicsDraw
                     Xlenght++;
                 }
                 catch { }
-                //}
+
 
                 for (int i = 0; i < inputY.Length; i++)
                 {
@@ -237,23 +205,17 @@ namespace GraphicsDraw
                         }
                         else
                         {
-                            //if (int.Parse(numberY) <= pnlPaint.Size.Height)
-                            //{
+
                             Y[Ylenght] = float.Parse(numberY);
                             numberY = "";
                             Ylenght++;
-                            //}
+
                         }
                     }
-                    if (val < progressbar.Maximum)
-                    {
-                        val++;
-                    }
-                    progressbar.Value = val;
+                    
                 }
 
-                //if (int.Parse(numberY) <= pnlPaint.Size.Height)
-                //{
+
                 try
                 {
                     Y[Ylenght] = float.Parse(numberY);
@@ -261,7 +223,7 @@ namespace GraphicsDraw
                     Ylenght++;
                 }
                 catch { }
-                //}
+
                 int max = Xlenght;
                 if (Xlenght > Ylenght)
                 {
@@ -292,31 +254,18 @@ namespace GraphicsDraw
                                 Y[nNextY] = Y[nNextY - 1];
                             }
 
-                            switch (cmbChangeDraw.Text)
-                            {
-                                case "1":
-                                    g.DrawLine(pen, X[n], Y[n], X[nNextX], Y[nNextY]);
-                                    break;
-                                case "2":
-                                    g.FillEllipse(brush, X[n], Y[n], sizeBrushX, sizeBrushY);
-                                    break;
-                            }
-
+                            g.FillEllipse(brush, X[n], Y[n], sizeBrushX, sizeBrushY);
 
                             n++;
                         }
-                        if (val < progressbar.Maximum)
-                        {
-                            val++;
-                        }
-                        progressbar.Value = val;
+                        
                     }
 
                 }
                 catch
                 {
                     toolblStatus.Text = "Error when drawing. Please restart and check input data";
-                    progressbar.Value = 0;
+                    progressBar.Value = 0;
                 }
                 pen.Dispose();
                 g.Dispose();
@@ -324,9 +273,8 @@ namespace GraphicsDraw
             catch
             {
                 toolblStatus.Text = "X and/or Y   = NULL";
-                progressbar.Value = 0;
+                progressBar.Value = 0;
             }
-            progressbar.Value = progressbar.Maximum;
         }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace GraphicsDraw
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlPaint = new System.Windows.Forms.Panel();
             this.lblWhereX = new System.Windows.Forms.Label();
             this.lblWhereY = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@
             this.lblBrush = new System.Windows.Forms.Label();
             this.cmbSizeBrush = new System.Windows.Forms.ComboBox();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.cmbChangeDraw = new System.Windows.Forms.ComboBox();
-            this.progressbar = new System.Windows.Forms.ProgressBar();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPaint
             // 
             this.pnlPaint.BackColor = System.Drawing.Color.White;
+            this.pnlPaint.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pnlPaint.Location = new System.Drawing.Point(12, 12);
             this.pnlPaint.Name = "pnlPaint";
             this.pnlPaint.Size = new System.Drawing.Size(252, 234);
@@ -218,33 +218,21 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // cmbChangeDraw
+            // progressBar
             // 
-            this.cmbChangeDraw.FormattingEnabled = true;
-            this.cmbChangeDraw.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cmbChangeDraw.Location = new System.Drawing.Point(404, 261);
-            this.cmbChangeDraw.Name = "cmbChangeDraw";
-            this.cmbChangeDraw.Size = new System.Drawing.Size(34, 21);
-            this.cmbChangeDraw.TabIndex = 16;
-            this.cmbChangeDraw.Text = "1";
+            this.progressBar.Location = new System.Drawing.Point(12, 246);
+            this.progressBar.Maximum = 500;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(252, 10);
+            this.progressBar.Step = 1;
+            this.progressBar.TabIndex = 17;
             // 
-            // progressbar
-            // 
-            this.progressbar.Location = new System.Drawing.Point(12, 246);
-            this.progressbar.Name = "progressbar";
-            this.progressbar.Size = new System.Drawing.Size(252, 10);
-            this.progressbar.Step = 1;
-            this.progressbar.TabIndex = 17;
-            // 
-            // Main
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 316);
-            this.Controls.Add(this.progressbar);
-            this.Controls.Add(this.cmbChangeDraw);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cmbSizeBrush);
             this.Controls.Add(this.lblBrush);
@@ -263,7 +251,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(466, 355);
             this.MinimumSize = new System.Drawing.Size(466, 355);
-            this.Name = "Main";
+            this.Name = "frmMain";
             this.Text = "Paint and Point";
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
@@ -292,8 +280,7 @@
         private System.Windows.Forms.Label lblBrush;
         private System.Windows.Forms.ComboBox cmbSizeBrush;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.ComboBox cmbChangeDraw;
-        private System.Windows.Forms.ProgressBar progressbar;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
