@@ -1,9 +1,0 @@
-F:\Work\GitHub\Collipso\Escape\Escape\bin\Debug\Escape.exe.config
-F:\Work\GitHub\Collipso\Escape\Escape\bin\Debug\Escape.exe
-F:\Work\GitHub\Collipso\Escape\Escape\bin\Debug\Escape.pdb
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.csprojResolveAssemblyReference.cache
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.Properties.Resources.resources
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.csproj.GenerateResource.Cache
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.exe
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.pdb
-F:\Work\GitHub\Collipso\Escape\Escape\obj\Debug\Escape.frmMenu.resources
