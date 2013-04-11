@@ -27,3 +27,16 @@ Panzer
 ______
 Game. Panzer v1.0
 c# | MVC | Strategy
+
+
+GraphicsApp
+_____________
+Paint any pictures. Take X and Y, load...
+Applicationn for paint, processing and show result.
+c# | DirectX
+
+Escape
+_______
+Game. Run for fun =)
+Maybe my project for end study.
+c#

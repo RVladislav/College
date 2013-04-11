@@ -63,7 +63,7 @@ namespace GraphicsDraw
                 }
                 else
                 {
-                    toolblStatus.Text = "Full!";
+                    toolblStatus.Text = "Full! Stop painting";
                 }
 
             }
