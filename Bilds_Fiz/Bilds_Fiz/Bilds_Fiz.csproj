@@ -13,6 +13,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -39,6 +54,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,28 +65,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About_Autor.cs">
+    <Compile Include="DS_Build_Fiz.cs">
+      <DependentUpon>DS_Build_Fiz.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\About_Autor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About_Autor.Designer.cs">
+    <Compile Include="Forms\About_Autor.Designer.cs">
       <DependentUpon>About_Autor.cs</DependentUpon>
     </Compile>
-    <Compile Include="About_Programm.cs">
+    <Compile Include="Forms\About_Programm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="About_Programm.Designer.cs">
+    <Compile Include="Forms\About_Programm.Designer.cs">
       <DependentUpon>About_Programm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_House.cs">
+    <Compile Include="Forms\Add_House.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_House.Designer.cs">
+    <Compile Include="Forms\Add_House.Designer.cs">
       <DependentUpon>Add_House.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_Liter.cs">
+    <Compile Include="Forms\Add_Liter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Liter.Designer.cs">
+    <Compile Include="Forms\Add_Liter.Designer.cs">
       <DependentUpon>Add_Liter.cs</DependentUpon>
     </Compile>
     <Compile Include="DS_Build_Fiz.Designer.cs">
@@ -78,42 +98,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Build_Fiz.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View.cs">
+    <Compile Include="Forms\View.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View.Designer.cs">
+    <Compile Include="Forms\View.Designer.cs">
       <DependentUpon>View.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="About_Autor.resx">
+    <EmbeddedResource Include="Forms\About_Autor.resx">
       <DependentUpon>About_Autor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="About_Programm.resx">
+    <EmbeddedResource Include="Forms\About_Programm.resx">
       <DependentUpon>About_Programm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_House.resx">
+    <EmbeddedResource Include="Forms\Add_House.resx">
       <DependentUpon>Add_House.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_Liter.resx">
+    <EmbeddedResource Include="Forms\Add_Liter.resx">
       <DependentUpon>Add_Liter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -126,7 +146,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View.resx">
+    <EmbeddedResource Include="Forms\View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
@@ -159,6 +179,50 @@
     <None Include="Resources\3.bmp" />
     <None Include="Resources\2.png" />
     <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Build_Fiz.mdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="folder_home2_2784.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

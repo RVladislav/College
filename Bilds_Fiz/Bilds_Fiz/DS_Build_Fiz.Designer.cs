@@ -294,16 +294,16 @@ namespace Bilds_Fiz {
             this.tableLiter = new LiterDataTable();
             base.Tables.Add(this.tableLiter);
             this.relationBuild_AboutBuild = new global::System.Data.DataRelation("Build_AboutBuild", new global::System.Data.DataColumn[] {
-                        this.tableBuild_About_S.NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBuild.NumberColumn}, false);
+                        this.tableBuild_About_S.Номер_зданияColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBuild.Номер_зданияColumn}, false);
             this.Relations.Add(this.relationBuild_AboutBuild);
             this.relationBuild_AboutBuild1 = new global::System.Data.DataRelation("Build_AboutBuild1", new global::System.Data.DataColumn[] {
-                        this.tableBuild_About.NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableBuild.NumberColumn}, false);
+                        this.tableBuild_About.Номер_зданияColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBuild.Номер_зданияColumn}, false);
             this.Relations.Add(this.relationBuild_AboutBuild1);
             this.relationBuildLiter = new global::System.Data.DataRelation("BuildLiter", new global::System.Data.DataColumn[] {
-                        this.tableBuild.NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLiter.LitterColumn}, false);
+                        this.tableBuild.Номер_зданияColumn}, new global::System.Data.DataColumn[] {
+                        this.tableLiter.Номер_литераColumn}, false);
             this.Relations.Add(this.relationBuildLiter);
         }
         
@@ -405,15 +405,15 @@ namespace Bilds_Fiz {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class BuildDataTable : global::System.Data.TypedTableBase<BuildRow> {
             
-            private global::System.Data.DataColumn columnNumber;
+            private global::System.Data.DataColumn columnНомер_здания;
             
-            private global::System.Data.DataColumn columnBlock;
+            private global::System.Data.DataColumn columnНомер_квартала;
             
-            private global::System.Data.DataColumn columnAddress;
+            private global::System.Data.DataColumn columnАдресс;
             
-            private global::System.Data.DataColumn columnDistrict;
+            private global::System.Data.DataColumn columnРайон;
             
-            private global::System.Data.DataColumn columnInventory;
+            private global::System.Data.DataColumn columnДата_инвентаризации;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -450,41 +450,41 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumberColumn {
+            public global::System.Data.DataColumn Номер_зданияColumn {
                 get {
-                    return this.columnNumber;
+                    return this.columnНомер_здания;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BlockColumn {
+            public global::System.Data.DataColumn Номер_кварталаColumn {
                 get {
-                    return this.columnBlock;
+                    return this.columnНомер_квартала;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AddressColumn {
+            public global::System.Data.DataColumn АдрессColumn {
                 get {
-                    return this.columnAddress;
+                    return this.columnАдресс;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DistrictColumn {
+            public global::System.Data.DataColumn РайонColumn {
                 get {
-                    return this.columnDistrict;
+                    return this.columnРайон;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InventoryColumn {
+            public global::System.Data.DataColumn Дата_инвентаризацииColumn {
                 get {
-                    return this.columnInventory;
+                    return this.columnДата_инвентаризации;
                 }
             }
             
@@ -525,14 +525,14 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildRow AddBuildRow(Build_About_SRow parentBuild_About_SRowByBuild_AboutBuild, string Block, string Address, string District, System.DateTime Inventory) {
+            public BuildRow AddBuildRow(Build_About_SRow parentBuild_About_SRowByBuild_AboutBuild, string Номер_квартала, string Адресс, string Район, System.DateTime Дата_инвентаризации) {
                 BuildRow rowBuildRow = ((BuildRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Block,
-                        Address,
-                        District,
-                        Inventory};
+                        Номер_квартала,
+                        Адресс,
+                        Район,
+                        Дата_инвентаризации};
                 if ((parentBuild_About_SRowByBuild_AboutBuild != null)) {
                     columnValuesArray[0] = parentBuild_About_SRowByBuild_AboutBuild[0];
                 }
@@ -543,9 +543,9 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuildRow FindByNumber(byte Number) {
+            public BuildRow FindByНомер_здания(byte Номер_здания) {
                 return ((BuildRow)(this.Rows.Find(new object[] {
-                            Number})));
+                            Номер_здания})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -565,33 +565,33 @@ namespace Bilds_Fiz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNumber = base.Columns["Number"];
-                this.columnBlock = base.Columns["Block"];
-                this.columnAddress = base.Columns["Address"];
-                this.columnDistrict = base.Columns["District"];
-                this.columnInventory = base.Columns["Inventory"];
+                this.columnНомер_здания = base.Columns["Номер здания"];
+                this.columnНомер_квартала = base.Columns["Номер квартала"];
+                this.columnАдресс = base.Columns["Адресс"];
+                this.columnРайон = base.Columns["Район"];
+                this.columnДата_инвентаризации = base.Columns["Дата инвентаризации"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNumber = new global::System.Data.DataColumn("Number", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumber);
-                this.columnBlock = new global::System.Data.DataColumn("Block", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBlock);
-                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAddress);
-                this.columnDistrict = new global::System.Data.DataColumn("District", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDistrict);
-                this.columnInventory = new global::System.Data.DataColumn("Inventory", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInventory);
+                this.columnНомер_здания = new global::System.Data.DataColumn("Номер здания", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_здания);
+                this.columnНомер_квартала = new global::System.Data.DataColumn("Номер квартала", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_квартала);
+                this.columnАдресс = new global::System.Data.DataColumn("Адресс", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnАдресс);
+                this.columnРайон = new global::System.Data.DataColumn("Район", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnРайон);
+                this.columnДата_инвентаризации = new global::System.Data.DataColumn("Дата инвентаризации", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnДата_инвентаризации);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNumber}, true));
-                this.columnNumber.AllowDBNull = false;
-                this.columnNumber.Unique = true;
-                this.columnBlock.MaxLength = 20;
-                this.columnAddress.MaxLength = 60;
-                this.columnDistrict.MaxLength = 15;
+                                this.columnНомер_здания}, true));
+                this.columnНомер_здания.AllowDBNull = false;
+                this.columnНомер_здания.Unique = true;
+                this.columnНомер_квартала.MaxLength = 20;
+                this.columnАдресс.MaxLength = 60;
+                this.columnРайон.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -725,17 +725,17 @@ namespace Bilds_Fiz {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Build_AboutDataTable : global::System.Data.TypedTableBase<Build_AboutRow> {
             
-            private global::System.Data.DataColumn columnNumber;
+            private global::System.Data.DataColumn columnНомер_здания;
             
-            private global::System.Data.DataColumn columnBad;
+            private global::System.Data.DataColumn columnНеугодья;
             
-            private global::System.Data.DataColumn columnLight;
+            private global::System.Data.DataColumn columnСвет;
             
-            private global::System.Data.DataColumn columnWaterPipe;
+            private global::System.Data.DataColumn columnВодопровод;
             
-            private global::System.Data.DataColumn columnHeating;
+            private global::System.Data.DataColumn columnОтопление;
             
-            private global::System.Data.DataColumn columnComment;
+            private global::System.Data.DataColumn columnКомментарии;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -772,49 +772,49 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumberColumn {
+            public global::System.Data.DataColumn Номер_зданияColumn {
                 get {
-                    return this.columnNumber;
+                    return this.columnНомер_здания;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BadColumn {
+            public global::System.Data.DataColumn НеугодьяColumn {
                 get {
-                    return this.columnBad;
+                    return this.columnНеугодья;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LightColumn {
+            public global::System.Data.DataColumn СветColumn {
                 get {
-                    return this.columnLight;
+                    return this.columnСвет;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WaterPipeColumn {
+            public global::System.Data.DataColumn ВодопроводColumn {
                 get {
-                    return this.columnWaterPipe;
+                    return this.columnВодопровод;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HeatingColumn {
+            public global::System.Data.DataColumn ОтоплениеColumn {
                 get {
-                    return this.columnHeating;
+                    return this.columnОтопление;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CommentColumn {
+            public global::System.Data.DataColumn КомментарииColumn {
                 get {
-                    return this.columnComment;
+                    return this.columnКомментарии;
                 }
             }
             
@@ -855,15 +855,15 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Build_AboutRow AddBuild_AboutRow(byte Number, int Bad, bool Light, bool WaterPipe, bool Heating, string Comment) {
+            public Build_AboutRow AddBuild_AboutRow(byte Номер_здания, int Неугодья, bool Свет, bool Водопровод, bool Отопление, string Комментарии) {
                 Build_AboutRow rowBuild_AboutRow = ((Build_AboutRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Number,
-                        Bad,
-                        Light,
-                        WaterPipe,
-                        Heating,
-                        Comment};
+                        Номер_здания,
+                        Неугодья,
+                        Свет,
+                        Водопровод,
+                        Отопление,
+                        Комментарии};
                 rowBuild_AboutRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuild_AboutRow);
                 return rowBuild_AboutRow;
@@ -871,9 +871,9 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Build_AboutRow FindByNumber(byte Number) {
+            public Build_AboutRow FindByНомер_здания(byte Номер_здания) {
                 return ((Build_AboutRow)(this.Rows.Find(new object[] {
-                            Number})));
+                            Номер_здания})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -893,34 +893,34 @@ namespace Bilds_Fiz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNumber = base.Columns["Number"];
-                this.columnBad = base.Columns["Bad"];
-                this.columnLight = base.Columns["Light"];
-                this.columnWaterPipe = base.Columns["WaterPipe"];
-                this.columnHeating = base.Columns["Heating"];
-                this.columnComment = base.Columns["Comment"];
+                this.columnНомер_здания = base.Columns["Номер здания"];
+                this.columnНеугодья = base.Columns["Неугодья"];
+                this.columnСвет = base.Columns["Свет"];
+                this.columnВодопровод = base.Columns["Водопровод"];
+                this.columnОтопление = base.Columns["Отопление"];
+                this.columnКомментарии = base.Columns["Комментарии"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNumber = new global::System.Data.DataColumn("Number", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumber);
-                this.columnBad = new global::System.Data.DataColumn("Bad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBad);
-                this.columnLight = new global::System.Data.DataColumn("Light", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLight);
-                this.columnWaterPipe = new global::System.Data.DataColumn("WaterPipe", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWaterPipe);
-                this.columnHeating = new global::System.Data.DataColumn("Heating", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHeating);
-                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnComment);
+                this.columnНомер_здания = new global::System.Data.DataColumn("Номер здания", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_здания);
+                this.columnНеугодья = new global::System.Data.DataColumn("Неугодья", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНеугодья);
+                this.columnСвет = new global::System.Data.DataColumn("Свет", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСвет);
+                this.columnВодопровод = new global::System.Data.DataColumn("Водопровод", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnВодопровод);
+                this.columnОтопление = new global::System.Data.DataColumn("Отопление", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОтопление);
+                this.columnКомментарии = new global::System.Data.DataColumn("Комментарии", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКомментарии);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNumber}, true));
-                this.columnNumber.AllowDBNull = false;
-                this.columnNumber.Unique = true;
-                this.columnComment.MaxLength = 536870910;
+                                this.columnНомер_здания}, true));
+                this.columnНомер_здания.AllowDBNull = false;
+                this.columnНомер_здания.Unique = true;
+                this.columnКомментарии.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1054,19 +1054,19 @@ namespace Bilds_Fiz {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Build_About_SDataTable : global::System.Data.TypedTableBase<Build_About_SRow> {
             
-            private global::System.Data.DataColumn columnNumber;
+            private global::System.Data.DataColumn columnНомер_здания;
             
-            private global::System.Data.DataColumn columnLand;
+            private global::System.Data.DataColumn columnЗемельный_участок;
             
-            private global::System.Data.DataColumn columnActual;
+            private global::System.Data.DataColumn columnФактически;
             
-            private global::System.Data.DataColumn columnBuildUp;
+            private global::System.Data.DataColumn columnS_застройки;
             
-            private global::System.Data.DataColumn columnYard;
+            private global::System.Data.DataColumn columnS_двора;
             
-            private global::System.Data.DataColumn columnGreen;
+            private global::System.Data.DataColumn columnS_озеленения;
             
-            private global::System.Data.DataColumn columnGarden;
+            private global::System.Data.DataColumn columnS_сада;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1103,57 +1103,57 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumberColumn {
+            public global::System.Data.DataColumn Номер_зданияColumn {
                 get {
-                    return this.columnNumber;
+                    return this.columnНомер_здания;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LandColumn {
+            public global::System.Data.DataColumn Земельный_участокColumn {
                 get {
-                    return this.columnLand;
+                    return this.columnЗемельный_участок;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ActualColumn {
+            public global::System.Data.DataColumn ФактическиColumn {
                 get {
-                    return this.columnActual;
+                    return this.columnФактически;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BuildUpColumn {
+            public global::System.Data.DataColumn S_застройкиColumn {
                 get {
-                    return this.columnBuildUp;
+                    return this.columnS_застройки;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn YardColumn {
+            public global::System.Data.DataColumn S_двораColumn {
                 get {
-                    return this.columnYard;
+                    return this.columnS_двора;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn GreenColumn {
+            public global::System.Data.DataColumn S_озелененияColumn {
                 get {
-                    return this.columnGreen;
+                    return this.columnS_озеленения;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn GardenColumn {
+            public global::System.Data.DataColumn S_садаColumn {
                 get {
-                    return this.columnGarden;
+                    return this.columnS_сада;
                 }
             }
             
@@ -1194,16 +1194,16 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Build_About_SRow AddBuild_About_SRow(byte Number, int Land, int Actual, int BuildUp, int Yard, int Green, int Garden) {
+            public Build_About_SRow AddBuild_About_SRow(byte Номер_здания, int Земельный_участок, int Фактически, int S_застройки, int S_двора, int S_озеленения, int S_сада) {
                 Build_About_SRow rowBuild_About_SRow = ((Build_About_SRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Number,
-                        Land,
-                        Actual,
-                        BuildUp,
-                        Yard,
-                        Green,
-                        Garden};
+                        Номер_здания,
+                        Земельный_участок,
+                        Фактически,
+                        S_застройки,
+                        S_двора,
+                        S_озеленения,
+                        S_сада};
                 rowBuild_About_SRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuild_About_SRow);
                 return rowBuild_About_SRow;
@@ -1211,9 +1211,9 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Build_About_SRow FindByNumber(byte Number) {
+            public Build_About_SRow FindByНомер_здания(byte Номер_здания) {
                 return ((Build_About_SRow)(this.Rows.Find(new object[] {
-                            Number})));
+                            Номер_здания})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1233,36 +1233,36 @@ namespace Bilds_Fiz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNumber = base.Columns["Number"];
-                this.columnLand = base.Columns["Land"];
-                this.columnActual = base.Columns["Actual"];
-                this.columnBuildUp = base.Columns["BuildUp"];
-                this.columnYard = base.Columns["Yard"];
-                this.columnGreen = base.Columns["Green"];
-                this.columnGarden = base.Columns["Garden"];
+                this.columnНомер_здания = base.Columns["Номер здания"];
+                this.columnЗемельный_участок = base.Columns["Земельный участок"];
+                this.columnФактически = base.Columns["Фактически"];
+                this.columnS_застройки = base.Columns["S застройки"];
+                this.columnS_двора = base.Columns["S двора"];
+                this.columnS_озеленения = base.Columns["S озеленения"];
+                this.columnS_сада = base.Columns["S сада"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNumber = new global::System.Data.DataColumn("Number", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumber);
-                this.columnLand = new global::System.Data.DataColumn("Land", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLand);
-                this.columnActual = new global::System.Data.DataColumn("Actual", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnActual);
-                this.columnBuildUp = new global::System.Data.DataColumn("BuildUp", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuildUp);
-                this.columnYard = new global::System.Data.DataColumn("Yard", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYard);
-                this.columnGreen = new global::System.Data.DataColumn("Green", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGreen);
-                this.columnGarden = new global::System.Data.DataColumn("Garden", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGarden);
+                this.columnНомер_здания = new global::System.Data.DataColumn("Номер здания", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_здания);
+                this.columnЗемельный_участок = new global::System.Data.DataColumn("Земельный участок", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЗемельный_участок);
+                this.columnФактически = new global::System.Data.DataColumn("Фактически", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnФактически);
+                this.columnS_застройки = new global::System.Data.DataColumn("S застройки", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnS_застройки);
+                this.columnS_двора = new global::System.Data.DataColumn("S двора", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnS_двора);
+                this.columnS_озеленения = new global::System.Data.DataColumn("S озеленения", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnS_озеленения);
+                this.columnS_сада = new global::System.Data.DataColumn("S сада", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnS_сада);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNumber}, true));
-                this.columnNumber.AllowDBNull = false;
-                this.columnNumber.Unique = true;
+                                this.columnНомер_здания}, true));
+                this.columnНомер_здания.AllowDBNull = false;
+                this.columnНомер_здания.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1396,37 +1396,37 @@ namespace Bilds_Fiz {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class LiterDataTable : global::System.Data.TypedTableBase<LiterRow> {
             
-            private global::System.Data.DataColumn columnLitter;
+            private global::System.Data.DataColumn columnНомер_литера;
             
-            private global::System.Data.DataColumn columnContents;
+            private global::System.Data.DataColumn columnНазначение;
             
-            private global::System.Data.DataColumn columnType;
+            private global::System.Data.DataColumn columnТип_литера;
             
-            private global::System.Data.DataColumn columnMySelf;
+            private global::System.Data.DataColumn columnВозведено_самовольно;
             
-            private global::System.Data.DataColumn columnYear;
+            private global::System.Data.DataColumn columnГод;
             
-            private global::System.Data.DataColumn columnSquareAll;
+            private global::System.Data.DataColumn columnОбщая_площадь;
             
-            private global::System.Data.DataColumn columnInhabited;
+            private global::System.Data.DataColumn columnЖилая_площадь;
             
-            private global::System.Data.DataColumn columnWear;
+            private global::System.Data.DataColumn _columnИзнос_в__;
             
-            private global::System.Data.DataColumn columnWall;
+            private global::System.Data.DataColumn columnМатериал_стен;
             
-            private global::System.Data.DataColumn columnCost;
+            private global::System.Data.DataColumn columnИнвентаризационная_стоимость;
             
-            private global::System.Data.DataColumn columnStoreys;
+            private global::System.Data.DataColumn columnЭтажность;
             
-            private global::System.Data.DataColumn columnNumberSign;
+            private global::System.Data.DataColumn columnПомещений_в_эксплотации;
             
-            private global::System.Data.DataColumn columnPrescribe;
+            private global::System.Data.DataColumn columnНазначение_помещений;
             
-            private global::System.Data.DataColumn columnSquareRoom;
+            private global::System.Data.DataColumn columnS_помещений;
             
-            private global::System.Data.DataColumn columnHighRoom;
+            private global::System.Data.DataColumn columnH_помещений;
             
-            private global::System.Data.DataColumn columnStorey;
+            private global::System.Data.DataColumn columnЭтаж_размещения;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1463,129 +1463,129 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LitterColumn {
+            public global::System.Data.DataColumn Номер_литераColumn {
                 get {
-                    return this.columnLitter;
+                    return this.columnНомер_литера;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ContentsColumn {
+            public global::System.Data.DataColumn НазначениеColumn {
                 get {
-                    return this.columnContents;
+                    return this.columnНазначение;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TypeColumn {
+            public global::System.Data.DataColumn Тип_литераColumn {
                 get {
-                    return this.columnType;
+                    return this.columnТип_литера;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MySelfColumn {
+            public global::System.Data.DataColumn Возведено_самовольноColumn {
                 get {
-                    return this.columnMySelf;
+                    return this.columnВозведено_самовольно;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn YearColumn {
+            public global::System.Data.DataColumn ГодColumn {
                 get {
-                    return this.columnYear;
+                    return this.columnГод;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SquareAllColumn {
+            public global::System.Data.DataColumn Общая_площадьColumn {
                 get {
-                    return this.columnSquareAll;
+                    return this.columnОбщая_площадь;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn InhabitedColumn {
+            public global::System.Data.DataColumn Жилая_площадьColumn {
                 get {
-                    return this.columnInhabited;
+                    return this.columnЖилая_площадь;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WearColumn {
+            public global::System.Data.DataColumn _Износ_в__Column {
                 get {
-                    return this.columnWear;
+                    return this._columnИзнос_в__;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WallColumn {
+            public global::System.Data.DataColumn Материал_стенColumn {
                 get {
-                    return this.columnWall;
+                    return this.columnМатериал_стен;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CostColumn {
+            public global::System.Data.DataColumn Инвентаризационная_стоимостьColumn {
                 get {
-                    return this.columnCost;
+                    return this.columnИнвентаризационная_стоимость;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn StoreysColumn {
+            public global::System.Data.DataColumn ЭтажностьColumn {
                 get {
-                    return this.columnStoreys;
+                    return this.columnЭтажность;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NumberSignColumn {
+            public global::System.Data.DataColumn Помещений_в_эксплотацииColumn {
                 get {
-                    return this.columnNumberSign;
+                    return this.columnПомещений_в_эксплотации;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PrescribeColumn {
+            public global::System.Data.DataColumn Назначение_помещенийColumn {
                 get {
-                    return this.columnPrescribe;
+                    return this.columnНазначение_помещений;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SquareRoomColumn {
+            public global::System.Data.DataColumn S_помещенийColumn {
                 get {
-                    return this.columnSquareRoom;
+                    return this.columnS_помещений;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HighRoomColumn {
+            public global::System.Data.DataColumn H_помещенийColumn {
                 get {
-                    return this.columnHighRoom;
+                    return this.columnH_помещений;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn StoreyColumn {
+            public global::System.Data.DataColumn Этаж_размещенияColumn {
                 get {
-                    return this.columnStorey;
+                    return this.columnЭтаж_размещения;
                 }
             }
             
@@ -1628,39 +1628,39 @@ namespace Bilds_Fiz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LiterRow AddLiterRow(
                         BuildRow parentBuildRowByBuildLiter, 
-                        string Contents, 
-                        byte Type, 
-                        bool MySelf, 
-                        byte Year, 
-                        byte SquareAll, 
-                        byte Inhabited, 
-                        byte Wear, 
-                        string Wall, 
-                        decimal Cost, 
-                        byte Storeys, 
-                        byte NumberSign, 
-                        string Prescribe, 
-                        int SquareRoom, 
-                        int HighRoom, 
-                        int Storey) {
+                        string Назначение, 
+                        byte Тип_литера, 
+                        bool Возведено_самовольно, 
+                        int Год, 
+                        int Общая_площадь, 
+                        int Жилая_площадь, 
+                        int _Износ_в__, 
+                        string Материал_стен, 
+                        decimal Инвентаризационная_стоимость, 
+                        byte Этажность, 
+                        byte Помещений_в_эксплотации, 
+                        string Назначение_помещений, 
+                        int S_помещений, 
+                        int H_помещений, 
+                        int Этаж_размещения) {
                 LiterRow rowLiterRow = ((LiterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Contents,
-                        Type,
-                        MySelf,
-                        Year,
-                        SquareAll,
-                        Inhabited,
-                        Wear,
-                        Wall,
-                        Cost,
-                        Storeys,
-                        NumberSign,
-                        Prescribe,
-                        SquareRoom,
-                        HighRoom,
-                        Storey};
+                        Назначение,
+                        Тип_литера,
+                        Возведено_самовольно,
+                        Год,
+                        Общая_площадь,
+                        Жилая_площадь,
+                        _Износ_в__,
+                        Материал_стен,
+                        Инвентаризационная_стоимость,
+                        Этажность,
+                        Помещений_в_эксплотации,
+                        Назначение_помещений,
+                        S_помещений,
+                        H_помещений,
+                        Этаж_размещения};
                 if ((parentBuildRowByBuildLiter != null)) {
                     columnValuesArray[0] = parentBuildRowByBuildLiter[0];
                 }
@@ -1686,62 +1686,64 @@ namespace Bilds_Fiz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnLitter = base.Columns["Litter"];
-                this.columnContents = base.Columns["Contents"];
-                this.columnType = base.Columns["Type"];
-                this.columnMySelf = base.Columns["MySelf"];
-                this.columnYear = base.Columns["Year"];
-                this.columnSquareAll = base.Columns["SquareAll"];
-                this.columnInhabited = base.Columns["Inhabited"];
-                this.columnWear = base.Columns["Wear"];
-                this.columnWall = base.Columns["Wall"];
-                this.columnCost = base.Columns["Cost"];
-                this.columnStoreys = base.Columns["Storeys"];
-                this.columnNumberSign = base.Columns["NumberSign"];
-                this.columnPrescribe = base.Columns["Prescribe"];
-                this.columnSquareRoom = base.Columns["SquareRoom"];
-                this.columnHighRoom = base.Columns["HighRoom"];
-                this.columnStorey = base.Columns["Storey"];
+                this.columnНомер_литера = base.Columns["Номер литера"];
+                this.columnНазначение = base.Columns["Назначение"];
+                this.columnТип_литера = base.Columns["Тип литера"];
+                this.columnВозведено_самовольно = base.Columns["Возведено самовольно"];
+                this.columnГод = base.Columns["Год"];
+                this.columnОбщая_площадь = base.Columns["Общая площадь"];
+                this.columnЖилая_площадь = base.Columns["Жилая площадь"];
+                this._columnИзнос_в__ = base.Columns["Износ в %"];
+                this.columnМатериал_стен = base.Columns["Материал стен"];
+                this.columnИнвентаризационная_стоимость = base.Columns["Инвентаризационная стоимость"];
+                this.columnЭтажность = base.Columns["Этажность"];
+                this.columnПомещений_в_эксплотации = base.Columns["Помещений в эксплотации"];
+                this.columnНазначение_помещений = base.Columns["Назначение помещений"];
+                this.columnS_помещений = base.Columns["S помещений"];
+                this.columnH_помещений = base.Columns["H помещений"];
+                this.columnЭтаж_размещения = base.Columns["Этаж размещения"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnLitter = new global::System.Data.DataColumn("Litter", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLitter);
-                this.columnContents = new global::System.Data.DataColumn("Contents", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnContents);
-                this.columnType = new global::System.Data.DataColumn("Type", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnType);
-                this.columnMySelf = new global::System.Data.DataColumn("MySelf", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMySelf);
-                this.columnYear = new global::System.Data.DataColumn("Year", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYear);
-                this.columnSquareAll = new global::System.Data.DataColumn("SquareAll", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSquareAll);
-                this.columnInhabited = new global::System.Data.DataColumn("Inhabited", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInhabited);
-                this.columnWear = new global::System.Data.DataColumn("Wear", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWear);
-                this.columnWall = new global::System.Data.DataColumn("Wall", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWall);
-                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCost);
-                this.columnStoreys = new global::System.Data.DataColumn("Storeys", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStoreys);
-                this.columnNumberSign = new global::System.Data.DataColumn("NumberSign", typeof(byte), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumberSign);
-                this.columnPrescribe = new global::System.Data.DataColumn("Prescribe", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrescribe);
-                this.columnSquareRoom = new global::System.Data.DataColumn("SquareRoom", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSquareRoom);
-                this.columnHighRoom = new global::System.Data.DataColumn("HighRoom", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHighRoom);
-                this.columnStorey = new global::System.Data.DataColumn("Storey", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStorey);
-                this.columnContents.MaxLength = 20;
-                this.columnWall.MaxLength = 15;
-                this.columnPrescribe.MaxLength = 20;
+                this.columnНомер_литера = new global::System.Data.DataColumn("Номер литера", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНомер_литера);
+                this.columnНазначение = new global::System.Data.DataColumn("Назначение", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНазначение);
+                this.columnТип_литера = new global::System.Data.DataColumn("Тип литера", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnТип_литера);
+                this.columnВозведено_самовольно = new global::System.Data.DataColumn("Возведено самовольно", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnВозведено_самовольно);
+                this.columnГод = new global::System.Data.DataColumn("Год", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnГод);
+                this.columnОбщая_площадь = new global::System.Data.DataColumn("Общая площадь", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОбщая_площадь);
+                this.columnЖилая_площадь = new global::System.Data.DataColumn("Жилая площадь", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЖилая_площадь);
+                this._columnИзнос_в__ = new global::System.Data.DataColumn("Износ в %", typeof(int), null, global::System.Data.MappingType.Element);
+                this._columnИзнос_в__.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnИзнос_в__");
+                this._columnИзнос_в__.ExtendedProperties.Add("Generator_UserColumnName", "Износ в %");
+                base.Columns.Add(this._columnИзнос_в__);
+                this.columnМатериал_стен = new global::System.Data.DataColumn("Материал стен", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnМатериал_стен);
+                this.columnИнвентаризационная_стоимость = new global::System.Data.DataColumn("Инвентаризационная стоимость", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnИнвентаризационная_стоимость);
+                this.columnЭтажность = new global::System.Data.DataColumn("Этажность", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЭтажность);
+                this.columnПомещений_в_эксплотации = new global::System.Data.DataColumn("Помещений в эксплотации", typeof(byte), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnПомещений_в_эксплотации);
+                this.columnНазначение_помещений = new global::System.Data.DataColumn("Назначение помещений", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНазначение_помещений);
+                this.columnS_помещений = new global::System.Data.DataColumn("S помещений", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnS_помещений);
+                this.columnH_помещений = new global::System.Data.DataColumn("H помещений", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnH_помещений);
+                this.columnЭтаж_размещения = new global::System.Data.DataColumn("Этаж размещения", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЭтаж_размещения);
+                this.columnНазначение.MaxLength = 20;
+                this.columnМатериал_стен.MaxLength = 15;
+                this.columnНазначение_помещений.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1884,76 +1886,76 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Number {
+            public byte Номер_здания {
                 get {
-                    return ((byte)(this[this.tableBuild.NumberColumn]));
+                    return ((byte)(this[this.tableBuild.Номер_зданияColumn]));
                 }
                 set {
-                    this[this.tableBuild.NumberColumn] = value;
+                    this[this.tableBuild.Номер_зданияColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Block {
+            public string Номер_квартала {
                 get {
                     try {
-                        return ((string)(this[this.tableBuild.BlockColumn]));
+                        return ((string)(this[this.tableBuild.Номер_кварталаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Block\' in table \'Build\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Номер квартала\' in table \'Build\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild.BlockColumn] = value;
+                    this[this.tableBuild.Номер_кварталаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Address {
+            public string Адресс {
                 get {
                     try {
-                        return ((string)(this[this.tableBuild.AddressColumn]));
+                        return ((string)(this[this.tableBuild.АдрессColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'Build\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Адресс\' in table \'Build\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild.AddressColumn] = value;
+                    this[this.tableBuild.АдрессColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string District {
+            public string Район {
                 get {
                     try {
-                        return ((string)(this[this.tableBuild.DistrictColumn]));
+                        return ((string)(this[this.tableBuild.РайонColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'District\' in table \'Build\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Район\' in table \'Build\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild.DistrictColumn] = value;
+                    this[this.tableBuild.РайонColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Inventory {
+            public System.DateTime Дата_инвентаризации {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuild.InventoryColumn]));
+                        return ((global::System.DateTime)(this[this.tableBuild.Дата_инвентаризацииColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Inventory\' in table \'Build\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Дата инвентаризации\' in table \'Build\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild.InventoryColumn] = value;
+                    this[this.tableBuild.Дата_инвентаризацииColumn] = value;
                 }
             }
             
@@ -1981,50 +1983,50 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBlockNull() {
-                return this.IsNull(this.tableBuild.BlockColumn);
+            public bool IsНомер_кварталаNull() {
+                return this.IsNull(this.tableBuild.Номер_кварталаColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBlockNull() {
-                this[this.tableBuild.BlockColumn] = global::System.Convert.DBNull;
+            public void SetНомер_кварталаNull() {
+                this[this.tableBuild.Номер_кварталаColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAddressNull() {
-                return this.IsNull(this.tableBuild.AddressColumn);
+            public bool IsАдрессNull() {
+                return this.IsNull(this.tableBuild.АдрессColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAddressNull() {
-                this[this.tableBuild.AddressColumn] = global::System.Convert.DBNull;
+            public void SetАдрессNull() {
+                this[this.tableBuild.АдрессColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDistrictNull() {
-                return this.IsNull(this.tableBuild.DistrictColumn);
+            public bool IsРайонNull() {
+                return this.IsNull(this.tableBuild.РайонColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDistrictNull() {
-                this[this.tableBuild.DistrictColumn] = global::System.Convert.DBNull;
+            public void SetРайонNull() {
+                this[this.tableBuild.РайонColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInventoryNull() {
-                return this.IsNull(this.tableBuild.InventoryColumn);
+            public bool IsДата_инвентаризацииNull() {
+                return this.IsNull(this.tableBuild.Дата_инвентаризацииColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInventoryNull() {
-                this[this.tableBuild.InventoryColumn] = global::System.Convert.DBNull;
+            public void SetДата_инвентаризацииNull() {
+                this[this.tableBuild.Дата_инвентаризацииColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2055,153 +2057,153 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Number {
+            public byte Номер_здания {
                 get {
-                    return ((byte)(this[this.tableBuild_About.NumberColumn]));
+                    return ((byte)(this[this.tableBuild_About.Номер_зданияColumn]));
                 }
                 set {
-                    this[this.tableBuild_About.NumberColumn] = value;
+                    this[this.tableBuild_About.Номер_зданияColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Bad {
-                get {
-                    try {
-                        return ((int)(this[this.tableBuild_About.BadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Bad\' in table \'Build_About\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuild_About.BadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Light {
+            public int Неугодья {
                 get {
                     try {
-                        return ((bool)(this[this.tableBuild_About.LightColumn]));
+                        return ((int)(this[this.tableBuild_About.НеугодьяColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Light\' in table \'Build_About\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Неугодья\' in table \'Build_About\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About.LightColumn] = value;
+                    this[this.tableBuild_About.НеугодьяColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool WaterPipe {
+            public bool Свет {
                 get {
                     try {
-                        return ((bool)(this[this.tableBuild_About.WaterPipeColumn]));
+                        return ((bool)(this[this.tableBuild_About.СветColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'WaterPipe\' in table \'Build_About\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Свет\' in table \'Build_About\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About.WaterPipeColumn] = value;
+                    this[this.tableBuild_About.СветColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Heating {
+            public bool Водопровод {
                 get {
                     try {
-                        return ((bool)(this[this.tableBuild_About.HeatingColumn]));
+                        return ((bool)(this[this.tableBuild_About.ВодопроводColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Heating\' in table \'Build_About\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Водопровод\' in table \'Build_About\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About.HeatingColumn] = value;
+                    this[this.tableBuild_About.ВодопроводColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Comment {
+            public bool Отопление {
                 get {
                     try {
-                        return ((string)(this[this.tableBuild_About.CommentColumn]));
+                        return ((bool)(this[this.tableBuild_About.ОтоплениеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Comment\' in table \'Build_About\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Отопление\' in table \'Build_About\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About.CommentColumn] = value;
+                    this[this.tableBuild_About.ОтоплениеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBadNull() {
-                return this.IsNull(this.tableBuild_About.BadColumn);
+            public string Комментарии {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuild_About.КомментарииColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Комментарии\' in table \'Build_About\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuild_About.КомментарииColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBadNull() {
-                this[this.tableBuild_About.BadColumn] = global::System.Convert.DBNull;
+            public bool IsНеугодьяNull() {
+                return this.IsNull(this.tableBuild_About.НеугодьяColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLightNull() {
-                return this.IsNull(this.tableBuild_About.LightColumn);
+            public void SetНеугодьяNull() {
+                this[this.tableBuild_About.НеугодьяColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLightNull() {
-                this[this.tableBuild_About.LightColumn] = global::System.Convert.DBNull;
+            public bool IsСветNull() {
+                return this.IsNull(this.tableBuild_About.СветColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWaterPipeNull() {
-                return this.IsNull(this.tableBuild_About.WaterPipeColumn);
+            public void SetСветNull() {
+                this[this.tableBuild_About.СветColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWaterPipeNull() {
-                this[this.tableBuild_About.WaterPipeColumn] = global::System.Convert.DBNull;
+            public bool IsВодопроводNull() {
+                return this.IsNull(this.tableBuild_About.ВодопроводColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHeatingNull() {
-                return this.IsNull(this.tableBuild_About.HeatingColumn);
+            public void SetВодопроводNull() {
+                this[this.tableBuild_About.ВодопроводColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHeatingNull() {
-                this[this.tableBuild_About.HeatingColumn] = global::System.Convert.DBNull;
+            public bool IsОтоплениеNull() {
+                return this.IsNull(this.tableBuild_About.ОтоплениеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCommentNull() {
-                return this.IsNull(this.tableBuild_About.CommentColumn);
+            public void SetОтоплениеNull() {
+                this[this.tableBuild_About.ОтоплениеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCommentNull() {
-                this[this.tableBuild_About.CommentColumn] = global::System.Convert.DBNull;
+            public bool IsКомментарииNull() {
+                return this.IsNull(this.tableBuild_About.КомментарииColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetКомментарииNull() {
+                this[this.tableBuild_About.КомментарииColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2232,181 +2234,181 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Number {
+            public byte Номер_здания {
                 get {
-                    return ((byte)(this[this.tableBuild_About_S.NumberColumn]));
+                    return ((byte)(this[this.tableBuild_About_S.Номер_зданияColumn]));
                 }
                 set {
-                    this[this.tableBuild_About_S.NumberColumn] = value;
+                    this[this.tableBuild_About_S.Номер_зданияColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Land {
-                get {
-                    try {
-                        return ((int)(this[this.tableBuild_About_S.LandColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Land\' in table \'Build_About_S\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuild_About_S.LandColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Actual {
+            public int Земельный_участок {
                 get {
                     try {
-                        return ((int)(this[this.tableBuild_About_S.ActualColumn]));
+                        return ((int)(this[this.tableBuild_About_S.Земельный_участокColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Actual\' in table \'Build_About_S\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Земельный участок\' in table \'Build_About_S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About_S.ActualColumn] = value;
+                    this[this.tableBuild_About_S.Земельный_участокColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int BuildUp {
+            public int Фактически {
                 get {
                     try {
-                        return ((int)(this[this.tableBuild_About_S.BuildUpColumn]));
+                        return ((int)(this[this.tableBuild_About_S.ФактическиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BuildUp\' in table \'Build_About_S\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Фактически\' in table \'Build_About_S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About_S.BuildUpColumn] = value;
+                    this[this.tableBuild_About_S.ФактическиColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Yard {
+            public int S_застройки {
                 get {
                     try {
-                        return ((int)(this[this.tableBuild_About_S.YardColumn]));
+                        return ((int)(this[this.tableBuild_About_S.S_застройкиColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Yard\' in table \'Build_About_S\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'S застройки\' in table \'Build_About_S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About_S.YardColumn] = value;
+                    this[this.tableBuild_About_S.S_застройкиColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Green {
+            public int S_двора {
                 get {
                     try {
-                        return ((int)(this[this.tableBuild_About_S.GreenColumn]));
+                        return ((int)(this[this.tableBuild_About_S.S_двораColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Green\' in table \'Build_About_S\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'S двора\' in table \'Build_About_S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About_S.GreenColumn] = value;
+                    this[this.tableBuild_About_S.S_двораColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Garden {
+            public int S_озеленения {
                 get {
                     try {
-                        return ((int)(this[this.tableBuild_About_S.GardenColumn]));
+                        return ((int)(this[this.tableBuild_About_S.S_озелененияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Garden\' in table \'Build_About_S\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'S озеленения\' in table \'Build_About_S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuild_About_S.GardenColumn] = value;
+                    this[this.tableBuild_About_S.S_озелененияColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLandNull() {
-                return this.IsNull(this.tableBuild_About_S.LandColumn);
+            public int S_сада {
+                get {
+                    try {
+                        return ((int)(this[this.tableBuild_About_S.S_садаColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'S сада\' in table \'Build_About_S\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuild_About_S.S_садаColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLandNull() {
-                this[this.tableBuild_About_S.LandColumn] = global::System.Convert.DBNull;
+            public bool IsЗемельный_участокNull() {
+                return this.IsNull(this.tableBuild_About_S.Земельный_участокColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsActualNull() {
-                return this.IsNull(this.tableBuild_About_S.ActualColumn);
+            public void SetЗемельный_участокNull() {
+                this[this.tableBuild_About_S.Земельный_участокColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetActualNull() {
-                this[this.tableBuild_About_S.ActualColumn] = global::System.Convert.DBNull;
+            public bool IsФактическиNull() {
+                return this.IsNull(this.tableBuild_About_S.ФактическиColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBuildUpNull() {
-                return this.IsNull(this.tableBuild_About_S.BuildUpColumn);
+            public void SetФактическиNull() {
+                this[this.tableBuild_About_S.ФактическиColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBuildUpNull() {
-                this[this.tableBuild_About_S.BuildUpColumn] = global::System.Convert.DBNull;
+            public bool IsS_застройкиNull() {
+                return this.IsNull(this.tableBuild_About_S.S_застройкиColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsYardNull() {
-                return this.IsNull(this.tableBuild_About_S.YardColumn);
+            public void SetS_застройкиNull() {
+                this[this.tableBuild_About_S.S_застройкиColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetYardNull() {
-                this[this.tableBuild_About_S.YardColumn] = global::System.Convert.DBNull;
+            public bool IsS_двораNull() {
+                return this.IsNull(this.tableBuild_About_S.S_двораColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsGreenNull() {
-                return this.IsNull(this.tableBuild_About_S.GreenColumn);
+            public void SetS_двораNull() {
+                this[this.tableBuild_About_S.S_двораColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetGreenNull() {
-                this[this.tableBuild_About_S.GreenColumn] = global::System.Convert.DBNull;
+            public bool IsS_озелененияNull() {
+                return this.IsNull(this.tableBuild_About_S.S_озелененияColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsGardenNull() {
-                return this.IsNull(this.tableBuild_About_S.GardenColumn);
+            public void SetS_озелененияNull() {
+                this[this.tableBuild_About_S.S_озелененияColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetGardenNull() {
-                this[this.tableBuild_About_S.GardenColumn] = global::System.Convert.DBNull;
+            public bool IsS_садаNull() {
+                return this.IsNull(this.tableBuild_About_S.S_садаColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetS_садаNull() {
+                this[this.tableBuild_About_S.S_садаColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2437,257 +2439,257 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Litter {
+            public byte Номер_литера {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.LitterColumn]));
+                        return ((byte)(this[this.tableLiter.Номер_литераColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Litter\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Номер литера\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.LitterColumn] = value;
+                    this[this.tableLiter.Номер_литераColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Contents {
+            public string Назначение {
                 get {
                     try {
-                        return ((string)(this[this.tableLiter.ContentsColumn]));
+                        return ((string)(this[this.tableLiter.НазначениеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Contents\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Назначение\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.ContentsColumn] = value;
+                    this[this.tableLiter.НазначениеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Type {
+            public byte Тип_литера {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.TypeColumn]));
+                        return ((byte)(this[this.tableLiter.Тип_литераColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Тип литера\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.TypeColumn] = value;
+                    this[this.tableLiter.Тип_литераColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool MySelf {
+            public bool Возведено_самовольно {
                 get {
                     try {
-                        return ((bool)(this[this.tableLiter.MySelfColumn]));
+                        return ((bool)(this[this.tableLiter.Возведено_самовольноColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MySelf\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Возведено самовольно\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.MySelfColumn] = value;
+                    this[this.tableLiter.Возведено_самовольноColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Year {
+            public int Год {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.YearColumn]));
+                        return ((int)(this[this.tableLiter.ГодColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Year\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Год\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.YearColumn] = value;
+                    this[this.tableLiter.ГодColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte SquareAll {
+            public int Общая_площадь {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.SquareAllColumn]));
+                        return ((int)(this[this.tableLiter.Общая_площадьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SquareAll\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Общая площадь\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.SquareAllColumn] = value;
+                    this[this.tableLiter.Общая_площадьColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Inhabited {
+            public int Жилая_площадь {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.InhabitedColumn]));
+                        return ((int)(this[this.tableLiter.Жилая_площадьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Inhabited\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Жилая площадь\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.InhabitedColumn] = value;
+                    this[this.tableLiter.Жилая_площадьColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Wear {
+            public int _Износ_в__ {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.WearColumn]));
+                        return ((int)(this[this.tableLiter._Износ_в__Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Wear\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Износ в %\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.WearColumn] = value;
+                    this[this.tableLiter._Износ_в__Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Wall {
+            public string Материал_стен {
                 get {
                     try {
-                        return ((string)(this[this.tableLiter.WallColumn]));
+                        return ((string)(this[this.tableLiter.Материал_стенColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Wall\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Материал стен\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.WallColumn] = value;
+                    this[this.tableLiter.Материал_стенColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Cost {
+            public decimal Инвентаризационная_стоимость {
                 get {
                     try {
-                        return ((decimal)(this[this.tableLiter.CostColumn]));
+                        return ((decimal)(this[this.tableLiter.Инвентаризационная_стоимостьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cost\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Инвентаризационная стоимость\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.CostColumn] = value;
+                    this[this.tableLiter.Инвентаризационная_стоимостьColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte Storeys {
+            public byte Этажность {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.StoreysColumn]));
+                        return ((byte)(this[this.tableLiter.ЭтажностьColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Storeys\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Этажность\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.StoreysColumn] = value;
+                    this[this.tableLiter.ЭтажностьColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte NumberSign {
+            public byte Помещений_в_эксплотации {
                 get {
                     try {
-                        return ((byte)(this[this.tableLiter.NumberSignColumn]));
+                        return ((byte)(this[this.tableLiter.Помещений_в_эксплотацииColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NumberSign\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Помещений в эксплотации\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.NumberSignColumn] = value;
+                    this[this.tableLiter.Помещений_в_эксплотацииColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Prescribe {
+            public string Назначение_помещений {
                 get {
                     try {
-                        return ((string)(this[this.tableLiter.PrescribeColumn]));
+                        return ((string)(this[this.tableLiter.Назначение_помещенийColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Prescribe\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Назначение помещений\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.PrescribeColumn] = value;
+                    this[this.tableLiter.Назначение_помещенийColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SquareRoom {
+            public int S_помещений {
                 get {
                     try {
-                        return ((int)(this[this.tableLiter.SquareRoomColumn]));
+                        return ((int)(this[this.tableLiter.S_помещенийColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SquareRoom\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'S помещений\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.SquareRoomColumn] = value;
+                    this[this.tableLiter.S_помещенийColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int HighRoom {
+            public int H_помещений {
                 get {
                     try {
-                        return ((int)(this[this.tableLiter.HighRoomColumn]));
+                        return ((int)(this[this.tableLiter.H_помещенийColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HighRoom\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'H помещений\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.HighRoomColumn] = value;
+                    this[this.tableLiter.H_помещенийColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Storey {
+            public int Этаж_размещения {
                 get {
                     try {
-                        return ((int)(this[this.tableLiter.StoreyColumn]));
+                        return ((int)(this[this.tableLiter.Этаж_размещенияColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Storey\' in table \'Liter\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Этаж размещения\' in table \'Liter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLiter.StoreyColumn] = value;
+                    this[this.tableLiter.Этаж_размещенияColumn] = value;
                 }
             }
             
@@ -2704,194 +2706,194 @@ namespace Bilds_Fiz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLitterNull() {
-                return this.IsNull(this.tableLiter.LitterColumn);
+            public bool IsНомер_литераNull() {
+                return this.IsNull(this.tableLiter.Номер_литераColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLitterNull() {
-                this[this.tableLiter.LitterColumn] = global::System.Convert.DBNull;
+            public void SetНомер_литераNull() {
+                this[this.tableLiter.Номер_литераColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsContentsNull() {
-                return this.IsNull(this.tableLiter.ContentsColumn);
+            public bool IsНазначениеNull() {
+                return this.IsNull(this.tableLiter.НазначениеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetContentsNull() {
-                this[this.tableLiter.ContentsColumn] = global::System.Convert.DBNull;
+            public void SetНазначениеNull() {
+                this[this.tableLiter.НазначениеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTypeNull() {
-                return this.IsNull(this.tableLiter.TypeColumn);
+            public bool IsТип_литераNull() {
+                return this.IsNull(this.tableLiter.Тип_литераColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTypeNull() {
-                this[this.tableLiter.TypeColumn] = global::System.Convert.DBNull;
+            public void SetТип_литераNull() {
+                this[this.tableLiter.Тип_литераColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMySelfNull() {
-                return this.IsNull(this.tableLiter.MySelfColumn);
+            public bool IsВозведено_самовольноNull() {
+                return this.IsNull(this.tableLiter.Возведено_самовольноColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMySelfNull() {
-                this[this.tableLiter.MySelfColumn] = global::System.Convert.DBNull;
+            public void SetВозведено_самовольноNull() {
+                this[this.tableLiter.Возведено_самовольноColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsYearNull() {
-                return this.IsNull(this.tableLiter.YearColumn);
+            public bool IsГодNull() {
+                return this.IsNull(this.tableLiter.ГодColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetYearNull() {
-                this[this.tableLiter.YearColumn] = global::System.Convert.DBNull;
+            public void SetГодNull() {
+                this[this.tableLiter.ГодColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSquareAllNull() {
-                return this.IsNull(this.tableLiter.SquareAllColumn);
+            public bool IsОбщая_площадьNull() {
+                return this.IsNull(this.tableLiter.Общая_площадьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSquareAllNull() {
-                this[this.tableLiter.SquareAllColumn] = global::System.Convert.DBNull;
+            public void SetОбщая_площадьNull() {
+                this[this.tableLiter.Общая_площадьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsInhabitedNull() {
-                return this.IsNull(this.tableLiter.InhabitedColumn);
+            public bool IsЖилая_площадьNull() {
+                return this.IsNull(this.tableLiter.Жилая_площадьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetInhabitedNull() {
-                this[this.tableLiter.InhabitedColumn] = global::System.Convert.DBNull;
+            public void SetЖилая_площадьNull() {
+                this[this.tableLiter.Жилая_площадьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWearNull() {
-                return this.IsNull(this.tableLiter.WearColumn);
+            public bool Is_Износ_в__Null() {
+                return this.IsNull(this.tableLiter._Износ_в__Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWearNull() {
-                this[this.tableLiter.WearColumn] = global::System.Convert.DBNull;
+            public void Set_Износ_в__Null() {
+                this[this.tableLiter._Износ_в__Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWallNull() {
-                return this.IsNull(this.tableLiter.WallColumn);
+            public bool IsМатериал_стенNull() {
+                return this.IsNull(this.tableLiter.Материал_стенColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWallNull() {
-                this[this.tableLiter.WallColumn] = global::System.Convert.DBNull;
+            public void SetМатериал_стенNull() {
+                this[this.tableLiter.Материал_стенColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCostNull() {
-                return this.IsNull(this.tableLiter.CostColumn);
+            public bool IsИнвентаризационная_стоимостьNull() {
+                return this.IsNull(this.tableLiter.Инвентаризационная_стоимостьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCostNull() {
-                this[this.tableLiter.CostColumn] = global::System.Convert.DBNull;
+            public void SetИнвентаризационная_стоимостьNull() {
+                this[this.tableLiter.Инвентаризационная_стоимостьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsStoreysNull() {
-                return this.IsNull(this.tableLiter.StoreysColumn);
+            public bool IsЭтажностьNull() {
+                return this.IsNull(this.tableLiter.ЭтажностьColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetStoreysNull() {
-                this[this.tableLiter.StoreysColumn] = global::System.Convert.DBNull;
+            public void SetЭтажностьNull() {
+                this[this.tableLiter.ЭтажностьColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNumberSignNull() {
-                return this.IsNull(this.tableLiter.NumberSignColumn);
+            public bool IsПомещений_в_эксплотацииNull() {
+                return this.IsNull(this.tableLiter.Помещений_в_эксплотацииColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNumberSignNull() {
-                this[this.tableLiter.NumberSignColumn] = global::System.Convert.DBNull;
+            public void SetПомещений_в_эксплотацииNull() {
+                this[this.tableLiter.Помещений_в_эксплотацииColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPrescribeNull() {
-                return this.IsNull(this.tableLiter.PrescribeColumn);
+            public bool IsНазначение_помещенийNull() {
+                return this.IsNull(this.tableLiter.Назначение_помещенийColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPrescribeNull() {
-                this[this.tableLiter.PrescribeColumn] = global::System.Convert.DBNull;
+            public void SetНазначение_помещенийNull() {
+                this[this.tableLiter.Назначение_помещенийColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSquareRoomNull() {
-                return this.IsNull(this.tableLiter.SquareRoomColumn);
+            public bool IsS_помещенийNull() {
+                return this.IsNull(this.tableLiter.S_помещенийColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSquareRoomNull() {
-                this[this.tableLiter.SquareRoomColumn] = global::System.Convert.DBNull;
+            public void SetS_помещенийNull() {
+                this[this.tableLiter.S_помещенийColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHighRoomNull() {
-                return this.IsNull(this.tableLiter.HighRoomColumn);
+            public bool IsH_помещенийNull() {
+                return this.IsNull(this.tableLiter.H_помещенийColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHighRoomNull() {
-                this[this.tableLiter.HighRoomColumn] = global::System.Convert.DBNull;
+            public void SetH_помещенийNull() {
+                this[this.tableLiter.H_помещенийColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsStoreyNull() {
-                return this.IsNull(this.tableLiter.StoreyColumn);
+            public bool IsЭтаж_размещенияNull() {
+                return this.IsNull(this.tableLiter.Этаж_размещенияColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetStoreyNull() {
-                this[this.tableLiter.StoreyColumn] = global::System.Convert.DBNull;
+            public void SetЭтаж_размещенияNull() {
+                this[this.tableLiter.Этаж_размещенияColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3156,11 +3158,11 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Build";
-            tableMapping.ColumnMappings.Add("Number", "Number");
-            tableMapping.ColumnMappings.Add("Block", "Block");
-            tableMapping.ColumnMappings.Add("Address", "Address");
-            tableMapping.ColumnMappings.Add("District", "District");
-            tableMapping.ColumnMappings.Add("Inventory", "Inventory");
+            tableMapping.ColumnMappings.Add("Number", "Номер здания");
+            tableMapping.ColumnMappings.Add("Block", "Номер квартала");
+            tableMapping.ColumnMappings.Add("Address", "Адресс");
+            tableMapping.ColumnMappings.Add("District", "Район");
+            tableMapping.ColumnMappings.Add("Inventory", "Дата инвентаризации");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3490,14 +3492,6 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Block, string Address, string District, global::System.Nullable<global::System.DateTime> Inventory, global::System.Nullable<byte> Original_Number, string Original_Block, string Original_Address, string Original_District, global::System.Nullable<global::System.DateTime> Original_Inventory) {
-            return this.Update(Original_Number, Block, Address, District, Inventory, Original_Number, Original_Block, Original_Address, Original_District, Original_Inventory);
-        }
     }
     
     /// <summary>
@@ -3621,12 +3615,12 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Build_About";
-            tableMapping.ColumnMappings.Add("Number", "Number");
-            tableMapping.ColumnMappings.Add("Bad", "Bad");
-            tableMapping.ColumnMappings.Add("Light", "Light");
-            tableMapping.ColumnMappings.Add("WaterPipe", "WaterPipe");
-            tableMapping.ColumnMappings.Add("Heating", "Heating");
-            tableMapping.ColumnMappings.Add("Comment", "Comment");
+            tableMapping.ColumnMappings.Add("Number", "Номер здания");
+            tableMapping.ColumnMappings.Add("Bad", "Неугодья");
+            tableMapping.ColumnMappings.Add("Light", "Свет");
+            tableMapping.ColumnMappings.Add("WaterPipe", "Водопровод");
+            tableMapping.ColumnMappings.Add("Heating", "Отопление");
+            tableMapping.ColumnMappings.Add("Comment", "Комментарии");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3887,14 +3881,6 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Bad, bool Light, bool WaterPipe, bool Heating, string Comment, global::System.Nullable<byte> Original_Number, global::System.Nullable<int> Original_Bad, bool Original_Light, bool Original_WaterPipe, bool Original_Heating) {
-            return this.Update(Original_Number, Bad, Light, WaterPipe, Heating, Comment, Original_Number, Original_Bad, Original_Light, Original_WaterPipe, Original_Heating);
-        }
     }
     
     /// <summary>
@@ -4018,13 +4004,13 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Build_About_S";
-            tableMapping.ColumnMappings.Add("Number", "Number");
-            tableMapping.ColumnMappings.Add("Land", "Land");
-            tableMapping.ColumnMappings.Add("Actual", "Actual");
-            tableMapping.ColumnMappings.Add("BuildUp", "BuildUp");
-            tableMapping.ColumnMappings.Add("Yard", "Yard");
-            tableMapping.ColumnMappings.Add("Green", "Green");
-            tableMapping.ColumnMappings.Add("Garden", "Garden");
+            tableMapping.ColumnMappings.Add("Number", "Номер здания");
+            tableMapping.ColumnMappings.Add("Land", "Земельный участок");
+            tableMapping.ColumnMappings.Add("Actual", "Фактически");
+            tableMapping.ColumnMappings.Add("BuildUp", "S застройки");
+            tableMapping.ColumnMappings.Add("Yard", "S двора");
+            tableMapping.ColumnMappings.Add("Green", "S озеленения");
+            tableMapping.ColumnMappings.Add("Garden", "S сада");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -4405,14 +4391,6 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Land, global::System.Nullable<int> Actual, global::System.Nullable<int> BuildUp, global::System.Nullable<int> Yard, global::System.Nullable<int> Green, global::System.Nullable<int> Garden, global::System.Nullable<byte> Original_Number, global::System.Nullable<int> Original_Land, global::System.Nullable<int> Original_Actual, global::System.Nullable<int> Original_BuildUp, global::System.Nullable<int> Original_Yard, global::System.Nullable<int> Original_Green, global::System.Nullable<int> Original_Garden) {
-            return this.Update(Original_Number, Land, Actual, BuildUp, Yard, Green, Garden, Original_Number, Original_Land, Original_Actual, Original_BuildUp, Original_Yard, Original_Green, Original_Garden);
-        }
     }
     
     /// <summary>
@@ -4536,22 +4514,22 @@ namespace Bilds_Fiz.DS_Build_FizTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Liter";
-            tableMapping.ColumnMappings.Add("Litter", "Litter");
-            tableMapping.ColumnMappings.Add("Contents", "Contents");
-            tableMapping.ColumnMappings.Add("Type", "Type");
-            tableMapping.ColumnMappings.Add("MySelf", "MySelf");
-            tableMapping.ColumnMappings.Add("Year", "Year");
-            tableMapping.ColumnMappings.Add("SquareAll", "SquareAll");
-            tableMapping.ColumnMappings.Add("Inhabited", "Inhabited");
-            tableMapping.ColumnMappings.Add("Wear", "Wear");
-            tableMapping.ColumnMappings.Add("Wall", "Wall");
-            tableMapping.ColumnMappings.Add("Cost", "Cost");
-            tableMapping.ColumnMappings.Add("Storeys", "Storeys");
-            tableMapping.ColumnMappings.Add("NumberSign", "NumberSign");
-            tableMapping.ColumnMappings.Add("Prescribe", "Prescribe");
-            tableMapping.ColumnMappings.Add("SquareRoom", "SquareRoom");
-            tableMapping.ColumnMappings.Add("HighRoom", "HighRoom");
-            tableMapping.ColumnMappings.Add("Storey", "Storey");
+            tableMapping.ColumnMappings.Add("Litter", "Номер литера");
+            tableMapping.ColumnMappings.Add("Contents", "Назначение");
+            tableMapping.ColumnMappings.Add("Type", "Тип литера");
+            tableMapping.ColumnMappings.Add("MySelf", "Возведено самовольно");
+            tableMapping.ColumnMappings.Add("Year", "Год");
+            tableMapping.ColumnMappings.Add("SquareAll", "Общая площадь");
+            tableMapping.ColumnMappings.Add("Inhabited", "Жилая площадь");
+            tableMapping.ColumnMappings.Add("Wear", "Износ в %");
+            tableMapping.ColumnMappings.Add("Wall", "Материал стен");
+            tableMapping.ColumnMappings.Add("Cost", "Инвентаризационная стоимость");
+            tableMapping.ColumnMappings.Add("Storeys", "Этажность");
+            tableMapping.ColumnMappings.Add("NumberSign", "Помещений в эксплотации");
+            tableMapping.ColumnMappings.Add("Prescribe", "Назначение помещений");
+            tableMapping.ColumnMappings.Add("SquareRoom", "S помещений");
+            tableMapping.ColumnMappings.Add("HighRoom", "H помещений");
+            tableMapping.ColumnMappings.Add("Storey", "Этаж размещения");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
