@@ -45,3 +45,42 @@ C:\R\УчПрактика\from home\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.
 C:\R\УчПрактика\from home\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmView.resources
 C:\R\УчПрактика\from home\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\R\УчПрактика\from home\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\bin\Debug\Bilds_Fiz.exe.config
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.exe
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.pdb
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\bin\Debug\Build_Fiz.mdb
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\bin\Debug\Bilds_Fiz.exe
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\bin\Debug\Bilds_Fiz.pdb
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAbout_Autor.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAbout_Programm.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAdd_House.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAdd_Liter.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmMain.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmMenu.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.Properties.Resources.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmView.resources
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\R\УчПрактика\from work\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Work\GitHub\Collipso\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmDocument.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\bin\Debug\Bilds_Fiz.exe.config
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.exe
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.pdb
+C:\R\УчПрактика\BD\Bilds_Fiz\bin\Debug\Build_Fiz.mdb
+C:\R\УчПрактика\BD\Bilds_Fiz\bin\Debug\Bilds_Fiz.exe
+C:\R\УчПрактика\BD\Bilds_Fiz\bin\Debug\Bilds_Fiz.pdb
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAbout_Autor.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAbout_Programm.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAdd_House.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmAdd_Liter.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmDocument.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmMain.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmMenu.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.Properties.Resources.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.frmView.resources
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\R\УчПрактика\BD\Bilds_Fiz\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Bilds_Fiz\Bilds_Fiz\bin\Debug\Bilds_Fiz.exe.config
+D:\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.exe
+D:\Bilds_Fiz\Bilds_Fiz\obj\x86\Debug\Bilds_Fiz.pdb

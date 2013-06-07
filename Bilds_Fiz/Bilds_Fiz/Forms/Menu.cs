@@ -22,7 +22,7 @@ namespace Bilds_Fiz
         {
             if (check == false)
             {
-                if (txtLogin.Text == "Vladislav" && txtPassword.Text == "Razhnov" || txtLogin.Text == "Marina" && txtPassword.Text == "Erina")
+                if (txtLogin.Text == "Vladislav" && txtPassword.Text == "Razhnov")
                 {
                     frmMain frm = new frmMain();
 

@@ -40,12 +40,19 @@ namespace Bilds_Fiz
                     dgvView.DataSource = BS_liter;
                     this.Text = "Литер";
                     break;
+                case 5:
+                    this.TA_buildAllInfo.Fill(this.dS_Build_Fiz.BuildAllInfo);
+                    dgvView.DataSource = BS_buildAllInfo;
+                    this.Text = "Литер";
+                    break; 
             }
             return 0;
         }
 
         private void frmView_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dS_Build_Fiz.BuildAllInfo' table. You can move, or remove it, as needed.
+            this.TA_buildAllInfo.Fill(this.dS_Build_Fiz.BuildAllInfo);
            
         }
     }

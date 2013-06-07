@@ -6,143 +6,68 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Bilds_Fiz
 {
 
     public partial class frmMain : Form
     {
+        
         public frmMain()
         {
             InitializeComponent();
         }
-        
-        public object addBuilds(int[] arrayProperty, List<string> listProperty, DateTime eventDate, bool light, bool water, bool hot)
+
+
+
+        public void addBuilds(int[] arrayProperty, List<string> listProperty, DateTime eventDate, bool light, bool water, bool hot)
         {
-            byte n = Convert.ToByte(arrayProperty[0]);
             string ev = eventDate.ToShortDateString();
             eventDate = DateTime.Parse(ev);
 
             dgvOne.DataSource = null;
-            //About_S            
-            TA_buildAboutS.Insert(n, arrayProperty[2], arrayProperty[3], arrayProperty[4], arrayProperty[5], arrayProperty[6], arrayProperty[7]);
-            TA_buildAboutS.Fill(DS_Build_Fiz.Build_About_S);
-            dgvOne.DataSource = BS_buildAboutS;
-            //About
-            TA_buildAbout.Insert(n, arrayProperty[8], light, water, hot, listProperty[2]);
-            TA_buildAbout.Fill(DS_Build_Fiz.Build_About);
-            dgvOne.DataSource = BS_buildAbout;
             //Build
-            TA_build.Insert(n, arrayProperty[1].ToString(), listProperty[0], listProperty[1], eventDate);
+            TA_build.Insert(arrayProperty[0], arrayProperty[1].ToString(), listProperty[0], listProperty[1], eventDate);
             TA_build.Fill(DS_Build_Fiz.Build);
             dgvOne.DataSource = BS_build;
+            //About_S            
+            TA_buildAboutS.Insert(arrayProperty[0], arrayProperty[2], arrayProperty[3], arrayProperty[4], arrayProperty[5], arrayProperty[6], arrayProperty[7]);
+            TA_buildAboutS.Fill(DS_Build_Fiz.Build_About_S);
+            dgvOne.DataSource = BS_buildAboutS;            
+            //About
+            TA_buildAbout.Insert(arrayProperty[0], arrayProperty[8], light, water, hot, listProperty[2]);
+            TA_buildAbout.Fill(DS_Build_Fiz.Build_About);
+            dgvOne.DataSource = BS_buildAbout;
+            
 
             TA_buildAboutS.Update(DS_Build_Fiz.Build_About_S);
             TA_buildAbout.Update(DS_Build_Fiz.Build_About);
             TA_build.Update(DS_Build_Fiz.Build);
-            
-            return 0;
+
         }
 
-        //public object addLiters34(int[] arrayProperty, List<string> listProperty, bool myself)
-        //{
-        //    byte r = Convert.ToByte(numberLiter);
-        //    byte f = Convert.ToByte(floor);
-        //    byte t = Convert.ToByte(type);
-        //    byte la = Convert.ToByte(liveArea);
-        //    byte al = Convert.ToByte(allArea);
-        //    byte n = Convert.ToByte(numberLiter);
-        //    byte bb = Convert.ToByte(breakBuild);
-        //    dgvOne.DataSource = null;
-        //    TA_liter.Insert(n, whyBuild, t, myself, byte.Parse(year.ToString()), al, la, bb, walls, coast, f, r, whyRooms, roomsArea, roomsHight, roomsFloor);
-        //    TA_liter.Fill(DS_Build_Fiz.Liter);
-        //    dgvOne.DataSource = BS_buildAboutS;
-
-        //    TA_liter.Update(DS_Build_Fiz.Liter);
-
-        //    return 0;
-        //}
 
 
-        public object addLiters(
-            int numberLiter
-            , int type
-            , int year
-            , int allArea
-            , int liveArea
-            , int breakBuild
-            , int coast
-            , int floor
-            , int rooms
-            , int roomsArea
-            , int roomsHight
-            , int roomsFloor
-            , string whyBuild
-            , string whyRooms
-            , string walls
-        , bool myself
-            )
+        public void addLiters(bool myself, int[] arrayProperty, List<string> listProperty)
         {
-            byte r = Convert.ToByte(numberLiter);
-            byte f = Convert.ToByte(floor);
-            byte t = Convert.ToByte(type);
-            byte la = Convert.ToByte(liveArea);
-            byte al = Convert.ToByte(allArea);
-            byte n = Convert.ToByte(numberLiter);
-            byte bb = Convert.ToByte(breakBuild);
+            
             dgvOne.DataSource = null;
+            //Build-Liter
+            TA_build_Liter.Insert(arrayProperty[0], arrayProperty[12]);
+            TA_build_Liter.Fill(DS_Build_Fiz.Build_Liter);
+            dgvOne.DataSource = BS_buildLiter;
             //Liter
-            TA_liter.Insert(n, whyBuild, t, myself, byte.Parse(year.ToString()), al, la, bb, walls, coast, f, r, whyRooms, roomsArea, roomsHight, roomsFloor);
+            byte type = byte.Parse(arrayProperty[1].ToString());
+            TA_liter.Insert(arrayProperty[0], listProperty[0], type, myself, arrayProperty[2], arrayProperty[3], arrayProperty[4], arrayProperty[5], listProperty[1], arrayProperty[6], arrayProperty[7], arrayProperty[8]
+                , listProperty[2], arrayProperty[9], arrayProperty[10], arrayProperty[11]);
             TA_liter.Fill(DS_Build_Fiz.Liter);
-            dgvOne.DataSource = BS_buildAboutS;
+            dgvOne.DataSource = BS_liter;
 
+            TA_build_Liter.Update(DS_Build_Fiz.Build_Liter);
             TA_liter.Update(DS_Build_Fiz.Liter);
 
-            return 0;
         }
-
-        //public object addBuilds(
-        //    int number
-        // , int numberKvartal
-        // , int square
-        // , int squareF
-        // , int squareFull
-        // , int squareSkver
-        // , int squareGreen
-        // , int squareGarden
-        // , int bad
-        //    , string adress
-        //         , string area
-        //         , string more
-        //    , DateTime eventDate
-        //    , bool light
-        //         , bool water
-        //         , bool hot)
-        //{
-        //    byte n = Convert.ToByte(number);
-        //    string ev = eventDate.ToShortDateString();
-        //    eventDate = DateTime.Parse(ev);
-
-        //    dgvOne.DataSource = null;
-        //    //About_S            
-        //    TA_buildAboutS.Insert(n, square, squareF, squareFull, squareSkver, squareGreen, squareGarden);
-        //    TA_buildAboutS.Fill(DS_Build_Fiz.Build_About_S);
-        //    dgvOne.DataSource = BS_buildAboutS;
-        //    //About
-        //    TA_buildAbout.Insert(n, bad, light, water, hot, more);
-        //    TA_buildAbout.Fill(DS_Build_Fiz.Build_About);
-        //    dgvOne.DataSource = BS_buildAbout;
-        //    //Build
-        //    TA_build.Insert(n, numberKvartal.ToString(), adress, area, eventDate);
-        //    TA_build.Fill(DS_Build_Fiz.Build);
-        //    dgvOne.DataSource = BS_build;
-
-        //    TA_buildAboutS.Update(DS_Build_Fiz.Build_About_S);
-        //    TA_buildAbout.Update(DS_Build_Fiz.Build_About);
-        //    TA_build.Update(DS_Build_Fiz.Build);           
-            
-        //    return 0;
-        //}
 
         private int OpenView(int n)
         {
@@ -155,6 +80,10 @@ namespace Bilds_Fiz
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DS_Build_Fiz.Build_Liter' table. You can move, or remove it, as needed.
+            //this.TA_build_Liter.Fill(this.DS_Build_Fiz.Build_Liter);
+            // TODO: This line of code loads data into the 'DS_Build_Fiz.BuildAllInfo' table. You can move, or remove it, as needed.
+            //this.TA_buildAllInfo.Fill(this.DS_Build_Fiz.BuildAllInfo);
 
         }
 
@@ -186,7 +115,7 @@ namespace Bilds_Fiz
         {
             try
             {
-                this.TA_build.FillBuild(this.DS_Build_Fiz.Build);
+                this.TA_build.Fill(this.DS_Build_Fiz.Build);
             }
             catch (System.Exception ex)
             {
@@ -195,65 +124,27 @@ namespace Bilds_Fiz
 
         }
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    byte a = 10;
-        //    int aa = 2;
-        //    string b = "dfd";
-        //    string c = "trtrtrtr";
-        //    string d = "oii";
-        //    DateTime dt = new DateTime(2013, 2, 10);
-
-
-
-        //    //About_S
-        //    TA_buildAboutS.Insert(a, a, a, a, a, a, a);
-        //    dgvOne.DataSource = null;
-        //    TA_buildAboutS.Fill(DS_Build_Fiz.Build_About_S);
-        //    dgvOne.DataSource = BS_buildAboutS;
-        //    //About
-        //    TA_buildAbout.Insert(a, aa, true, true, true, c);
-        //    dgvOne.DataSource = null;
-        //    TA_buildAbout.Fill(DS_Build_Fiz.Build_About);
-        //    dgvOne.DataSource = BS_buildAbout;
-        //    //Build
-        //    TA_build.Insert(a, b, c, d, dt);
-        //    dgvOne.DataSource = null;
-        //    TA_build.Fill(DS_Build_Fiz.Build);
-        //    dgvOne.DataSource = BS_build;
-
-        //}
-
         private int picPic(int n)
         {
-            switch (n)
-            {
-                case 1:
-                    pictureBox1.Image = Properties.Resources._2;
-                    pictureBox2.Image = Properties.Resources._1;
-                    pictureBox3.Image = Properties.Resources._1;
-                    pictureBox4.Image = Properties.Resources._1;
-                    break;
-                case 2:
-                    pictureBox1.Image = Properties.Resources._1;
-                    pictureBox2.Image = Properties.Resources._2;
-                    pictureBox3.Image = Properties.Resources._1;
-                    pictureBox4.Image = Properties.Resources._1;
-                    break;
-                case 3:
-                    pictureBox1.Image = Properties.Resources._1;
-                    pictureBox2.Image = Properties.Resources._1;
-                    pictureBox3.Image = Properties.Resources._2;
-                    pictureBox4.Image = Properties.Resources._1;
-                    break;
-                case 4:
-                    pictureBox1.Image = Properties.Resources._1;
-                    pictureBox2.Image = Properties.Resources._1;
-                    pictureBox3.Image = Properties.Resources._1;
-                    pictureBox4.Image = Properties.Resources._2;
-                    break;
-            }
-            return 0;
+           switch(n)
+           {
+               case 1: 
+                   pictureBox1.Image = Properties.Resources._1;
+                   pictureBox2.Image = Properties.Resources._1;
+                   pictureBox3.Image = Properties.Resources._2;
+            break;
+               case 2:
+            pictureBox1.Image = Properties.Resources._2;
+            pictureBox2.Image = Properties.Resources._1;
+            pictureBox3.Image = Properties.Resources._1;
+            break;
+               case 3:
+            pictureBox1.Image = Properties.Resources._1;
+            pictureBox2.Image = Properties.Resources._2;
+            pictureBox3.Image = Properties.Resources._1;
+            break;
+        }
+           return 0;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -262,7 +153,7 @@ namespace Bilds_Fiz
             dgvOne.DataSource = DS_Build_Fiz.Build;
             dgvOne.Update();
 
-            picPic(1);
+            picPic(2);
 
         }
 
@@ -272,7 +163,7 @@ namespace Bilds_Fiz
             dgvOne.DataSource = DS_Build_Fiz.Build_About;
             dgvOne.Update();
 
-            picPic(2);
+                    
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -281,7 +172,7 @@ namespace Bilds_Fiz
             dgvOne.DataSource = DS_Build_Fiz.Build_About_S;
             dgvOne.Update();
 
-            picPic(3);
+           
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -290,7 +181,7 @@ namespace Bilds_Fiz
             dgvOne.DataSource = DS_Build_Fiz.Liter;
             dgvOne.Update();
 
-            picPic(4);
+            picPic(3);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -325,11 +216,154 @@ namespace Bilds_Fiz
             frm.ShowDialog();
         }
 
-        private void выделеннуюСтрокуToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            
+            OpenView(5);
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            TA_buildAllInfo.Fill(DS_Build_Fiz.BuildAllInfo);
+            dgvOne.DataSource = DS_Build_Fiz.BuildAllInfo;
+            dgvOne.Update();
+
+            picPic(1);
+        }
+
+        private void вДокументToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+                string table = dgvOne.DataSource.ToString();
+                frmDocument frm = new frmDocument();
+                List<string> str = new List<string>();
+
+                switch (table)
+                {
+                    case "Build":
+                        docBuildShot(frm, str);
+                        break;
+                    case "Liter":
+                        docLiter(frm, str);
+                        break;
+                    case "BuildAllInfo":
+                        docBuildAllInfo(frm, str);
+                        break;
+                }
+                frm.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Не открыта таблица", "Ошибка чтения данных из таблицы", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
+                
+          
+        }
+
+        private void docBuildAllInfo(frmDocument frm, List<string> str)
+        {
+            DateTime date = new DateTime();
+            date = DateTime.Parse(dgvOne.CurrentRow.Cells[4].Value.ToString());
+
+            str.Add("BuildAllInfo");
+            str.Add(dgvOne.CurrentRow.Cells[0].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[1].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[2].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[3].Value.ToString());
+            str.Add(date.ToShortDateString());
+            str.Add(dgvOne.CurrentRow.Cells[5].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[6].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[7].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[8].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[9].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[10].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[11].Value.ToString());
+            if (bool.Parse(dgvOne.CurrentRow.Cells[12].Value.ToString()) == true)
+            {
+                str.Add("Есть");
+            }
+            else
+            {
+                str.Add("Отсутствует");
+            }
+            if (bool.Parse(dgvOne.CurrentRow.Cells[13].Value.ToString()) == true)
+            {
+                str.Add("Есть");
+            }
+            else
+            {
+                str.Add("Отсутствует");
+            }
+            if(bool.Parse(dgvOne.CurrentRow.Cells[14].Value.ToString()) == true)
+            {
+                str.Add("Есть");
+            }
+            else
+            {
+                str.Add("Отсутствует");
+            }
+
+            str.Add(dgvOne.CurrentRow.Cells[15].Value.ToString());            
+            
+            frm.doc(str);
+        }
+
+        private void docLiter(frmDocument frm, List<string> str)
+        {
+            str.Add("Liter");
+            str.Add(dgvOne.CurrentRow.Cells[0].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[1].Value.ToString());
+
+            if (dgvOne.CurrentRow.Cells[2].Value.ToString() == "1")
+            {
+                str.Add("Основной");
+            }
+            else
+            {
+                str.Add("Дополнительный");
+            }
+
+            str.Add(dgvOne.CurrentRow.Cells[3].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[4].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[5].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[6].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[7].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[8].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[9].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[10].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[11].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[12].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[13].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[14].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[15].Value.ToString());
+
+            frm.doc(str);
+         
+        }
+
+        private void docBuildShot(frmDocument frm, List<string> str)
+        {
+            DateTime date = DateTime.Parse(dgvOne.CurrentRow.Cells[4].Value.ToString());
+            
+            str.Add("Build");
+            str.Add(dgvOne.CurrentRow.Cells[0].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[1].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[2].Value.ToString());
+            str.Add(dgvOne.CurrentRow.Cells[3].Value.ToString());
+            str.Add(date.ToShortDateString());
+
+            frm.doc(str);  
+        }
+
+      
+
+        //Обновление таблицы
+
+        //dgvOne.DataSource = null;
+        //TA_liter.Fill(DS_Build_Fiz.Liter);
+        //dgvOne.DataSource = BS_liter;
 
     }
 }

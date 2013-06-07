@@ -11,25 +11,6 @@ namespace Bilds_Fiz
 {
     public partial class frmAdd_House : Form
     {
-        //House build = new House();
-        
-        //int number
-        //, numberKvartal
-        //, square
-        //, squareF
-        //, squareFull
-        //, squareSkver
-        //, squareGreen
-        //, squareGarden
-        //, bad;
-        //    string adress
-        //        , area
-        //        , more;
-        //    DateTime eventDate;
-        //    bool light
-        //        , water
-        //        , hot;
-
         public frmAdd_House()
         {
             InitializeComponent();
@@ -44,9 +25,7 @@ namespace Bilds_Fiz
         {
             try
             {
-                //adress = txtAdress.Text;
-                //area = txtArea.Text;
-                //more = txtMore.Text;
+
                 DateTime eventDate = dtpEvent.Value;
                 bool light = chbLight.Checked
                 , water = chbWater.Checked
@@ -71,44 +50,9 @@ namespace Bilds_Fiz
                 frmMain frm = new frmMain();
                 frm.addBuilds(arrayProperty, listProperty, eventDate, light, water, hot);
 
-        //        number = int.Parse(txtNumber.Text);
-        //        numberKvartal = int.Parse(txtNumberKv.Text);
-        //        adress = txtAdress.Text;
-        //        area = txtArea.Text;
-        //        eventDate = dtpEvent.Value;
-        //        square = int.Parse(txtSquare.Text);
-        //        squareF = int.Parse(txtSquareF.Text);
-        //        squareFull = int.Parse(txtSquareFull.Text);
-        //        squareSkver = int.Parse(txtSquareScver.Text);
-        //        squareGreen = int.Parse(txtSquareGreen.Text);
-        //        squareGarden = int.Parse(txtSquareGarden.Text);
-        //        bad = int.Parse(txtBad.Text);
-        //        light = chbLight.Checked;
-        //        water = chbWater.Checked;
-        //        hot = chbHot.Checked;
-        //        more = txtMore.Text;
-                
-        //        frmMain frm = new frmMain();
-        //        frm.addBuilds(number
-        //, numberKvartal
-        //, square
-        //, squareF
-        //, squareFull
-        //, squareSkver
-        //, squareGreen
-        //, squareGarden
-        //, bad
-        //, adress
-        //        , area
-        //        , more
-        //        , eventDate
-        //        , light
-        //        , water
-        //        , hot);
-
                 this.Close();
             }
-            catch
+            catch (Exception)
             {
                 MessageBox.Show("Не все поля заполнены. Проверьте правильность ввода", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }

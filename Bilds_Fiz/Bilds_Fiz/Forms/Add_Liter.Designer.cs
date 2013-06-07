@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +65,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rbAdditional = new System.Windows.Forms.RadioButton();
             this.rbMain = new System.Windows.Forms.RadioButton();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbNumberBuild = new System.Windows.Forms.ComboBox();
+            this.BS_build = new System.Windows.Forms.BindingSource(this.components);
+            this.dS_Build_Fiz = new Bilds_Fiz.DS_Build_Fiz();
+            this.TA_build = new Bilds_Fiz.DS_Build_FizTableAdapters.BuildTableAdapter();
             this.grbLiter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_build)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Build_Fiz)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -324,7 +332,7 @@
             // 
             // txtRoomsFloor
             // 
-            this.txtRoomsFloor.Location = new System.Drawing.Point(266, 525);
+            this.txtRoomsFloor.Location = new System.Drawing.Point(266, 527);
             this.txtRoomsFloor.Name = "txtRoomsFloor";
             this.txtRoomsFloor.Size = new System.Drawing.Size(122, 20);
             this.txtRoomsFloor.TabIndex = 71;
@@ -371,11 +379,47 @@
             this.rbMain.Text = "Основной";
             this.rbMain.UseVisualStyleBackColor = true;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 566);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 13);
+            this.label17.TabIndex = 73;
+            this.label17.Text = "Номер дома";
+            // 
+            // cmbNumberBuild
+            // 
+            this.cmbNumberBuild.DataSource = this.BS_build;
+            this.cmbNumberBuild.DisplayMember = "Здание #";
+            this.cmbNumberBuild.FormattingEnabled = true;
+            this.cmbNumberBuild.Location = new System.Drawing.Point(267, 558);
+            this.cmbNumberBuild.Name = "cmbNumberBuild";
+            this.cmbNumberBuild.Size = new System.Drawing.Size(121, 21);
+            this.cmbNumberBuild.TabIndex = 75;
+            this.cmbNumberBuild.ValueMember = "Здание #";
+            // 
+            // BS_build
+            // 
+            this.BS_build.DataMember = "Build";
+            this.BS_build.DataSource = this.dS_Build_Fiz;
+            // 
+            // dS_Build_Fiz
+            // 
+            this.dS_Build_Fiz.DataSetName = "DS_Build_Fiz";
+            this.dS_Build_Fiz.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TA_build
+            // 
+            this.TA_build.ClearBeforeFill = true;
+            // 
             // frmAdd_Liter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 647);
+            this.Controls.Add(this.cmbNumberBuild);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.grbLiter);
             this.Controls.Add(this.txtRoomsFloor);
             this.Controls.Add(this.txtRoomsHight);
@@ -414,8 +458,11 @@
             this.MinimizeBox = false;
             this.Name = "frmAdd_Liter";
             this.Text = "Добавление литера";
+            this.Load += new System.EventHandler(this.frmAdd_Liter_Load);
             this.grbLiter.ResumeLayout(false);
             this.grbLiter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_build)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS_Build_Fiz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,5 +506,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbAdditional;
         private System.Windows.Forms.RadioButton rbMain;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmbNumberBuild;
+        private DS_Build_Fiz dS_Build_Fiz;
+        private System.Windows.Forms.BindingSource BS_build;
+        private DS_Build_FizTableAdapters.BuildTableAdapter TA_build;
     }
 }

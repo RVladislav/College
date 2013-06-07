@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -69,6 +69,17 @@
       <DependentUpon>DS_Build_Fiz.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document.Designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Build_Fiz.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Build_Fiz.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\About_Autor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,11 +103,6 @@
     </Compile>
     <Compile Include="Forms\Add_Liter.Designer.cs">
       <DependentUpon>Add_Liter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DS_Build_Fiz.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DS_Build_Fiz.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Add_Liter.resx">
       <DependentUpon>Add_Liter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document.resx">
+      <DependentUpon>Document.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -181,6 +190,16 @@
     <None Include="Resources\1.png" />
   </ItemGroup>
   <ItemGroup>
+    <PublishFile Include="Bilds_Fiz.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
     <PublishFile Include="Build_Fiz.mdb">
       <Visible>False</Visible>
       <Group>

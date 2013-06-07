@@ -12,23 +12,6 @@ namespace Bilds_Fiz
     public partial class frmAdd_Liter : Form
     {
 
-        int numberLiter
-            , type
-            , year
-            , allArea
-            , liveArea
-            , breakBuild
-            , coast
-            , floor
-            , rooms
-            , roomsArea
-            , roomsHight
-            , roomsFloor;
-        string whyBuild
-            , whyRooms
-            , walls;
-        bool myself;
-
         public frmAdd_Liter()
         {
             InitializeComponent();
@@ -43,78 +26,38 @@ namespace Bilds_Fiz
         {
             try
             {
-                //int[] arrayProperty = new int[5];
-                //arrayProperty[0] = int.Parse(txtNumber.Text);
-                //if (rbMain.Checked == true)
-                //{
-                //    arrayProperty[1] = 1;
-                //}
-                //else
-                //{
-                //    arrayProperty[1] = 0;
-                //}
-                //arrayProperty[2] = int.Parse(txtYear.Text);
-                //arrayProperty[3] = int.Parse(txtAllarea.Text);
-                //arrayProperty[4] = int.Parse(txtLivearea.Text);
-                //arrayProperty[5] = int.Parse(txtbreakBuild.Text);
-                //arrayProperty[6] = int.Parse(txtCoast.Text);
-                //arrayProperty[7] = int.Parse(txtFloor.Text);
-                //arrayProperty[8] = int.Parse(txtRooms.Text);
-                //arrayProperty[9] = int.Parse(txtRoomsArea.Text);
-                //arrayProperty[10] = int.Parse(txtRoomsHight.Text);
-                //arrayProperty[11] = int.Parse(txtRoomsFloor.Text);                
+                bool myself = chbMyself.Checked;
 
-                //List<string> listProperty = new List<string>();
-                //listProperty.Add(txtWhyBuild.Text);
-                //listProperty.Add(txtRoomsWhy.Text);
-                //listProperty.Add(txtWall.Text);
-                
-                //bool myself = chbMyself.Checked;
-
-                //frmMain frm = new frmMain();
-                //frm.addLiters34(arrayProperty, listProperty, myself);
-
-                numberLiter = int.Parse(txtNumber.Text);
+                int[] arrayProperty = new int[13];
+                arrayProperty[0] = int.Parse(txtNumber.Text);
                 if (rbMain.Checked == true)
                 {
-                    type = 1;
+                    arrayProperty[1] = 1;
                 }
                 else
                 {
-                    type = 0;
+                    arrayProperty[1] = 0;
                 }
-                year = int.Parse(txtYear.Text);
-                allArea = int.Parse(txtAllarea.Text);
-                liveArea = int.Parse(txtAllarea.Text);
-                breakBuild = int.Parse(txtbreakBuild.Text);
-                coast = int.Parse(txtCoast.Text);
-                floor = int.Parse(txtFloor.Text);
-                rooms = int.Parse(txtRooms.Text);
-                roomsArea = int.Parse(txtRoomsArea.Text);
-                roomsHight = int.Parse(txtRoomsHight.Text);
-                roomsFloor = int.Parse(txtRoomsFloor.Text);
-                whyBuild = txtWhyBuild.Text;
-                whyRooms = txtRoomsWhy.Text;
-                walls = txtWall.Text;
-                myself = chbMyself.Checked;
+                arrayProperty[2] = int.Parse(txtYear.Text);
+                arrayProperty[3] = int.Parse(txtAllarea.Text);
+                arrayProperty[4] = int.Parse(txtLivearea.Text);
+                arrayProperty[5] = int.Parse(txtbreakBuild.Text);
+                arrayProperty[6] = int.Parse(txtCoast.Text);
+                arrayProperty[7] = int.Parse(txtFloor.Text);
+                arrayProperty[8] = int.Parse(txtRooms.Text);
+                arrayProperty[9] = int.Parse(txtRoomsArea.Text);
+                arrayProperty[10] = int.Parse(txtRoomsHight.Text);
+                arrayProperty[11] = int.Parse(txtRoomsFloor.Text);
+                arrayProperty[12] = int.Parse(cmbNumberBuild.Text);
+
+
+                List<string> listProperty = new List<string>();
+                listProperty.Add(txtWhyBuild.Text);
+                listProperty.Add(txtWall.Text);
+                listProperty.Add(txtRoomsWhy.Text);
 
                 frmMain frm = new frmMain();
-                frm.addLiters(numberLiter
-            , type
-            , year
-            , allArea
-            , liveArea
-            , breakBuild
-            , coast
-            , floor
-            , rooms
-            , roomsArea
-            , roomsHight
-            , roomsFloor
-        , whyBuild
-            , whyRooms
-            , walls
-         , myself);
+                frm.addLiters(myself, arrayProperty, listProperty);
 
                 this.Close();
             }
@@ -122,6 +65,13 @@ namespace Bilds_Fiz
             {
                 MessageBox.Show("Не все поля заполнены. Проверьте правильность ввода", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             }
+        }
+
+        private void frmAdd_Liter_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dS_Build_Fiz.Build' table. You can move, or remove it, as needed.
+            this.TA_build.Fill(this.dS_Build_Fiz.Build);
+
         }
 
      

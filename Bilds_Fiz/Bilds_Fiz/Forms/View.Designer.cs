@@ -40,19 +40,25 @@
             this.BS_buildAbout = new System.Windows.Forms.BindingSource(this.components);
             this.BS_buildAboutS = new System.Windows.Forms.BindingSource(this.components);
             this.BS_liter = new System.Windows.Forms.BindingSource(this.components);
+            this.BS_buildAllInfo = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_buildAllInfo = new Bilds_Fiz.DS_Build_FizTableAdapters.BuildAllInfoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Build_Fiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_build)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_buildAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_buildAboutS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_liter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_buildAllInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvView
             // 
             this.dgvView.AllowUserToAddRows = false;
             this.dgvView.AllowUserToDeleteRows = false;
-            this.dgvView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView.Location = new System.Drawing.Point(12, 12);
             this.dgvView.Name = "dgvView";
@@ -101,6 +107,15 @@
             this.BS_liter.DataMember = "Liter";
             this.BS_liter.DataSource = this.dS_Build_Fiz;
             // 
+            // BS_buildAllInfo
+            // 
+            this.BS_buildAllInfo.DataMember = "BuildAllInfo";
+            this.BS_buildAllInfo.DataSource = this.dS_Build_Fiz;
+            // 
+            // TA_buildAllInfo
+            // 
+            this.TA_buildAllInfo.ClearBeforeFill = true;
+            // 
             // frmView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_buildAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_buildAboutS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_liter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_buildAllInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,5 +150,7 @@
         private DS_Build_FizTableAdapters.Build_About_STableAdapter TA_buildAboutS;
         private System.Windows.Forms.BindingSource BS_liter;
         private DS_Build_FizTableAdapters.LiterTableAdapter TA_liter;
+        private System.Windows.Forms.BindingSource BS_buildAllInfo;
+        private DS_Build_FizTableAdapters.BuildAllInfoTableAdapter TA_buildAllInfo;
     }
 }
