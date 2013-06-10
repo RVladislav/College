@@ -186,22 +186,14 @@ namespace Bilds_Fiz
 
         private void label1_Click(object sender, EventArgs e)
         {
-            OpenView(1);
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
             OpenView(2);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            OpenView(3);
-        }
+       
 
         private void label4_Click(object sender, EventArgs e)
         {
-            OpenView(4);
+            OpenView(3);
         }
 
         private void домToolStripMenuItem_Click(object sender, EventArgs e)
@@ -218,7 +210,7 @@ namespace Bilds_Fiz
 
         private void label5_Click(object sender, EventArgs e)
         {
-            OpenView(5);
+            OpenView(1);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

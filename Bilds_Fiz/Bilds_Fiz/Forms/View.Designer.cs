@@ -55,9 +55,9 @@
             // 
             this.dgvView.AllowUserToAddRows = false;
             this.dgvView.AllowUserToDeleteRows = false;
-            this.dgvView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView.Location = new System.Drawing.Point(12, 12);
@@ -126,7 +126,6 @@
             this.Name = "frmView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View";
-            this.Load += new System.EventHandler(this.frmView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Build_Fiz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_build)).EndInit();
