@@ -66,21 +66,22 @@
             this.сохранитьToolStripMenuItem,
             this.печатьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // печатьToolStripMenuItem
             // 
             this.печатьToolStripMenuItem.Name = "печатьToolStripMenuItem";
-            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.печатьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.печатьToolStripMenuItem.Text = "Печать";
+            this.печатьToolStripMenuItem.Click += new System.EventHandler(this.печатьToolStripMenuItem_Click);
             // 
             // форматированиеТекстаToolStripMenuItem
             // 
@@ -90,20 +91,20 @@
             this.выравниваниеToolStripMenuItem,
             this.шрифтToolStripMenuItem});
             this.форматированиеТекстаToolStripMenuItem.Name = "форматированиеТекстаToolStripMenuItem";
-            this.форматированиеТекстаToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
+            this.форматированиеТекстаToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
             this.форматированиеТекстаToolStripMenuItem.Text = "Форматирование текста";
             // 
             // цветТекстаToolStripMenuItem
             // 
             this.цветТекстаToolStripMenuItem.Name = "цветТекстаToolStripMenuItem";
-            this.цветТекстаToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.цветТекстаToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.цветТекстаToolStripMenuItem.Text = "Цвет текста";
             this.цветТекстаToolStripMenuItem.Click += new System.EventHandler(this.цветТекстаToolStripMenuItem_Click);
             // 
             // цветВыделенияToolStripMenuItem
             // 
             this.цветВыделенияToolStripMenuItem.Name = "цветВыделенияToolStripMenuItem";
-            this.цветВыделенияToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.цветВыделенияToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.цветВыделенияToolStripMenuItem.Text = "Цвет выделения";
             this.цветВыделенияToolStripMenuItem.Click += new System.EventHandler(this.цветВыделенияToolStripMenuItem_Click);
             // 
@@ -114,14 +115,14 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.выравниваниеToolStripMenuItem.Name = "выравниваниеToolStripMenuItem";
-            this.выравниваниеToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.выравниваниеToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.выравниваниеToolStripMenuItem.Text = "Выравнивание";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(113, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem2.Text = "<-";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -129,7 +130,7 @@
             // 
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(113, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem3.Text = "<- ->";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -137,14 +138,14 @@
             // 
             this.toolStripMenuItem4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(113, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem4.Text = "->";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // шрифтToolStripMenuItem
             // 
             this.шрифтToolStripMenuItem.Name = "шрифтToolStripMenuItem";
-            this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.шрифтToolStripMenuItem.Text = "Шрифт";
             this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.шрифтToolStripMenuItem_Click);
             // 

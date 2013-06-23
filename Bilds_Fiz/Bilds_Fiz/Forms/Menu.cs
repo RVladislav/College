@@ -38,5 +38,28 @@ namespace Bilds_Fiz
         {
             Application.Exit();
         }
+
+        private void txtLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyEnter(sender, e);
+        }
+
+
+        private void keyEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.ToString() == "\r")
+            {
+                btnEnter_Click(sender, e);
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyEnter(sender, e);
+        }
+     
+
+       
+        
     }
 }

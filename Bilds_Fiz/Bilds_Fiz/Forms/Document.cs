@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using System.Drawing.Printing;
 
 namespace Bilds_Fiz
 {
@@ -77,9 +79,18 @@ namespace Bilds_Fiz
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog.FileName = "Document_" + tableOpenNow;
+            saveFileDialog.Filter = "DOC (*.doc)|*.doc";
+            saveFileDialog.FilterIndex = 2;
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.FileName = "Document_" + tableOpenNow + ".doc";
             saveFileDialog.Title = "Сохранение документа " + tableOpenNow;
-            saveFileDialog.ShowDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string textForsave = rtxtDoc.Text;
+                File.WriteAllText(saveFileDialog.FileName, textForsave);
+                
+            }
         }
 
         private void цветТекстаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,6 +145,21 @@ namespace Bilds_Fiz
             {
                 rtxtDoc.SelectionFont = fontDialog.Font;
             }
+        }
+
+        private void печатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //PrintDocument print = new PrintDocument();
+            //string stringToPrint = "Print this";
+            //string docName = "testPage.txt";
+            //string docPath = @"c:\";
+            //using (FileStream stream = new FileStream(docPath + docName, FileMode.Open))
+            //using (StreamReader reader = new StreamReader(stream))
+            //{
+            //    stringToPrint = reader.ReadToEnd();
+            //}
+            //print.Print();
+            
         }
 
       

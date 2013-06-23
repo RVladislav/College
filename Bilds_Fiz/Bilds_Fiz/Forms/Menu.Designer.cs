@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnEnter = new System.Windows.Forms.Button();
             this.lblLinkExit = new System.Windows.Forms.LinkLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblLogin
@@ -71,6 +69,7 @@
             this.txtLogin.Size = new System.Drawing.Size(135, 20);
             this.txtLogin.TabIndex = 2;
             this.txtLogin.Text = "Vladislav";
+            this.txtLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogin_KeyPress);
             // 
             // txtPassword
             // 
@@ -81,6 +80,7 @@
             this.txtPassword.Size = new System.Drawing.Size(135, 20);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Text = "Razhnov";
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // btnEnter
             // 
@@ -89,7 +89,6 @@
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 4;
             this.btnEnter.Text = "OK";
-            this.toolTip.SetToolTip(this.btnEnter, "Login: Имя\r\nPassword: Фамилия");
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
@@ -136,7 +135,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.LinkLabel lblLinkExit;
-        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 
