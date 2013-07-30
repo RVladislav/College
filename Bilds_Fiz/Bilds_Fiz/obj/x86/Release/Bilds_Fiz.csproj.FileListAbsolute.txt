@@ -131,3 +131,4 @@ F:\Bilds_Fiz\Bilds_Fiz\obj\x86\Release\Bilds_Fiz.Properties.Resources.resources
 F:\Bilds_Fiz\Bilds_Fiz\obj\x86\Release\Bilds_Fiz.frmView.resources
 F:\Bilds_Fiz\Bilds_Fiz\obj\x86\Release\GenerateResource.read.1.tlog
 F:\Bilds_Fiz\Bilds_Fiz\obj\x86\Release\GenerateResource.write.1.tlog
+F:\Work\GitHub\Collipso\Bilds_Fiz\Bilds_Fiz\obj\x86\Release\Bilds_Fiz.csprojResolveAssemblyReference.cache
