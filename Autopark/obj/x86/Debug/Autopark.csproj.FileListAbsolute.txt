@@ -11,3 +11,4 @@ F:\Work\GitHub\Collipso\Autopark\obj\x86\Debug\Autopark.frmHelp.resources
 F:\Work\GitHub\Collipso\Autopark\bin\Debug\Autopark.exe.config
 F:\Work\GitHub\Collipso\Autopark\obj\x86\Debug\Autopark.frmNewBus.resources
 F:\Work\GitHub\Collipso\Autopark\bin\Debug\db\Database.accdb
+F:\Work\GitHub\Collipso\Autopark\obj\x86\Debug\Autopark.csprojResolveAssemblyReference.cache

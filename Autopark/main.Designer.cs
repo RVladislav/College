@@ -223,9 +223,9 @@
             this.lblBus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBus.Location = new System.Drawing.Point(3, 12);
             this.lblBus.Name = "lblBus";
-            this.lblBus.Size = new System.Drawing.Size(85, 24);
+            this.lblBus.Size = new System.Drawing.Size(98, 24);
             this.lblBus.TabIndex = 3;
-            this.lblBus.Text = "Автобус";
+            this.lblBus.Text = "Автобусы";
             // 
             // frmMain
             // 

@@ -61,11 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="db\dsAutopark.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsAutopark.xsd</DependentUpon>
-    </Compile>
     <Compile Include="forms\Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,17 +118,6 @@
       <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="db\dsAutopark.xsc">
-      <DependentUpon>dsAutopark.xsd</DependentUpon>
-    </None>
-    <None Include="db\dsAutopark.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsAutopark.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="db\dsAutopark.xss">
-      <DependentUpon>dsAutopark.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
