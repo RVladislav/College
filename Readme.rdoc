@@ -1,5 +1,2 @@
 =Collipso
-repository for little projects
-Razhnov G. Vladislav
-Russia, SPb
-Since 2012
+repository for little projects | Razhnov G. Vladislav | Russia, SPb | Since 2012
